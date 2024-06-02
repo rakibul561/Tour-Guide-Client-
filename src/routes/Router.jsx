@@ -6,6 +6,8 @@ import Home from "../Pagse/Home/Home/Home";
 import Error from "../Error/Error";
 import Login from "../Componet/Pagse/Login";
 import Register from "../Componet/Pagse/Register";
+import PrivetRoute from "./PribetRoutes";
+import Blogs from "../Componet/Pagse/Blogs";
 
  export const router = createBrowserRouter([
     {
@@ -24,6 +26,10 @@ import Register from "../Componet/Pagse/Register";
             {
                 path:'/register',
                 element:<Register></Register>
+            },
+            {
+                path:'/blogs',
+                element: <PrivetRoute><Blogs></Blogs></PrivetRoute>
             }
         ]
     },

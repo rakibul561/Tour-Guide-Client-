@@ -5,16 +5,17 @@ import { useContext } from 'react';
 import img from '../../assets/Login/Login.jpg'
 
 
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from '../../Provaider/AuthProvaider';
+import toast, { Toaster } from 'react-hot-toast';
 
 
 
 
 
 const Login = () => {
-    // const location = useLocation();
-    // const navigate = useNavigate();
+    const location = useLocation();
+    const navigate = useNavigate();
     // const { signIn, googleLoginUser } = useContext(AuthContext);
 
     // const handleGooglelogin = async () => {
@@ -39,14 +40,14 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                // navigate(location?.state ? location.state : "/");
-                // toast.success("Login succesfully");
+                navigate(location?.state ? location.state : "/");
+                toast.success("Login succesfully");
 
             })
             // providerId
             .catch(error => {
                 console.log(error);
-                // toast.error("This didn't work.")
+                toast.error("This didn't work.")
             })
 
 
@@ -179,6 +180,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            <Toaster></Toaster>
             
         </div>
     )

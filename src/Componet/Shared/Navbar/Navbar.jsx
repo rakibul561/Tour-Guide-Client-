@@ -2,8 +2,9 @@
 
 import { useContext, useState } from 'react';
 import image from '../../../assets/Login/logo.png'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../../Provaider/AuthProvaider';
+import Swal from 'sweetalert2';
 // import logo from '../assets/logo/editable-hotel-logo-vector-business-corporate-identity-hostel_53876-111553.avif'
 
 
@@ -12,8 +13,8 @@ const Navbar = () => {
     // const {user,logOut} = useContext(AuthContext);
     // const navigate = useNavigate();
     const [userOpen, setUserOpen] = useState();
-    const { user } = useContext(AuthContext)
-    //   const navigate = useNavigate()
+    const { user,logOut } = useContext(AuthContext)
+      const navigate = useNavigate()
     //   const { handleModeChnage } = useTheme()
 
 
@@ -30,19 +31,19 @@ const Navbar = () => {
 
 
 
-    //   const handleLogOUt = async () => {
-    //     await logOut()
-    //     if (logOut.insertedId) {
-    //       Swal.fire({
-    //         title: 'Success!',
-    //         text: 'User Added successfully',
-    //         icon: 'success',
-    //         confirmButtonText: 'Cool'
-    //       })
+      const handleLogOUt = async () => {
+        await logOut()
+        if (logOut.insertedId) {
+          Swal.fire({
+            title: 'Success!',
+            text: 'User Added successfully',
+            icon: 'success',
+            confirmButtonText: 'Cool'
+          })
 
-    //     }
-    //     navigate("/login")
-    //   }
+        }
+        navigate("/login")
+      }
 
 
     return (
@@ -112,9 +113,9 @@ const Navbar = () => {
 
                             {
                                 user && <button
-
+                                 
                                     className="bg-[#FF497C] hover:bg-[#ab3154] duration-200 text-black font-bold px-4 xl:px-6 py-1 rounded cursor-pointer"
-
+                                    onClick={handleLogOUt}
                                 >
                                     logout
                                 </button>
