@@ -1,11 +1,14 @@
-import Banner from "./Banner";
+
+import Overview from "../Overview";
+import Carosel from "./Caresol";
 
 
 const Home = () => {
     return (
         <div>
             <div>
-                <Banner></Banner>
+                <Carosel></Carosel>
+                <Overview></Overview>
             </div>
         </div>
     );

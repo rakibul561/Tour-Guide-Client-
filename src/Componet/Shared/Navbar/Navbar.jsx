@@ -13,18 +13,17 @@ const Navbar = () => {
     // const {user,logOut} = useContext(AuthContext);
     // const navigate = useNavigate();
     const [userOpen, setUserOpen] = useState();
-    const { user, logOut } = useContext(AuthContext)
-    const navigate = useNavigate()
-    //   const { handleModeChnage } = useTheme()
+    const { user, logOut } = useContext(AuthContext);
+    const navigate = useNavigate();
 
 
 
     const navLink = <>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/community'>Community</NavLink></li>
-        <li><NavLink to='/blogs'> Blogs</NavLink></li>
-        <li><NavLink to='/about'> About Us</NavLink></li>
-        <li><NavLink to='/contact'> Contact Us</NavLink></li>
+        <a><NavLink to='/'>Home</NavLink></a>
+        <a><NavLink to='/community'>Community</NavLink></a>
+        <a><NavLink to='/blogs'> Blogs</NavLink></a>
+        <a><NavLink to='/about'> About Us</NavLink></a>
+        <a><NavLink to='/contact'> Contact Us</NavLink></a>
 
 
     </>
@@ -49,7 +48,7 @@ const Navbar = () => {
     return (
 
         <div>
-            <div className="navbar bg-green-500  text-black shadow-md rounded-lg ">
+            <div className="navbar bg-white fixed z-10 text-black shadow-md rounded-lg ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -62,11 +61,11 @@ const Navbar = () => {
                     </div>
                     <Link to='/' className='flex gap-2 items-center'>
                         <img className='h-16' src={image} alt='' />
-                        <span className='font-bold text-xl text-black'>Beautiful <span className='text-white'>Bangladesh</span></span>
+                        <span className='font-bold text-xl text-black'>Beautiful <span className='text-green-500'>Bangladesh</span></span>
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="menu menu-horizontal gap-8 px-1">
                         {navLink}
                     </ul>
                 </div>
@@ -75,13 +74,7 @@ const Navbar = () => {
                     <div className="relative md:border-l flex items-center w-full md:w-auto pl-5 ">
                         <div className=" w-[50px]"></div>
 
-                        <div className="mr-2">
-                            <label className="cursor-pointer grid place-items-center">
-                                <input type="checkbox" value="synthwave" className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2" />
-                                <svg className="col-start-1 row-start-1 stroke-base-100 fill-base-100" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5" /><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" /></svg>
-                                <svg className="col-start-2 row-start-1 stroke-base-100 fill-base-100" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                            </label>
-                        </div>
+
 
                         {user ? (
                             <button
@@ -106,8 +99,11 @@ const Navbar = () => {
                         {/* user Menu */}
                         <div
                             className={`absolute  z-50  ${userOpen ? "block" : "hidden"
-                                } flex flex-col  gap-4  shadow-lg bg-base-200 px-2  py-4 top-16 `}
+                                } flex flex-col gap-4 shadow-lg bg-base-200 px-2 py-4 top-16 `}
                         >
+
+                            <p className="text-sm text-white font-semibold">{user?.displayName}</p>
+                            <p className="text-sm text-white font-semibold">{user?.email}</p>
                             <Link to="dashboard"><button className=' duration-200 btn btn-sm btn-outline btn-success font-bold px-4 xl:px-6 py-1 rounded cursor-pointe'>Dashboard</button></Link>
 
                             {

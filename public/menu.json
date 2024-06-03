@@ -1,0 +1,92 @@
+[
+    {
+      "images": [
+        "https://i.ibb.co/FxFVZy9/young-woman-standing-dirty-river-23-2147770351.jpg",
+        "https://i.ibb.co/Jx1FKxR/autumn-background-670008-2442.jpg",
+        "https://i.ibb.co/rxtzgjX/rear-view-people-walking-footbridge-forest-1048944-27498828.jpg"
+      ],
+      "tour_type": "Adventure",
+      "trip_title": "Sundarbans Exploration",
+      "price": "$500"
+    },
+    {
+      "images": [
+        "https://i.ibb.co/Gv1CJF9/palace-king-mahal-kingdom-shiva-1376-66.jpg",
+        "https://i.ibb.co/0DmtgRD/beautiful-shot-lodhi-garden-delhi-india-cloudy-sky-181624-26937.jpg",
+        "https://i.ibb.co/n6Nrvkr/people-perform-morning-worship-maheshwar-fort-temple-sacred-river-narmada-maheshwar-madhya-pradesh-i.jpg"
+      ],
+      "tour_type": "Cultural",
+      "trip_title": "Dhaka Heritage Tour",
+      "price": "$300"
+    },
+    {
+      "images": [
+        "https://i.ibb.co/fpqn3cd/high-angle-view-man-hiking-against-mountains-1048944-20920933.jpg",
+        "https://i.ibb.co/zbRmdqY/hikers-pointing-towards-mountains-23-2147683215.jpg",
+        "https://i.ibb.co/C5rd9fy/group-tourists-walking-through-narrow-path-mountain-181624-19684.jpg"
+      ],
+      "tour_type": "Nature",
+      "trip_title": "Chittagong Hill Tracts Trek",
+      "price": "$400"
+    },
+    {
+      "images": [
+        "https://i.ibb.co/9NrdQ6D/beautiful-view-isa-khan-s-tomb-new-india-sunny-day-181624-60326.jpg",
+        "https://i.ibb.co/0DmtgRD/beautiful-shot-lodhi-garden-delhi-india-cloudy-sky-181624-26937.jpg",
+        "https://i.ibb.co/r78vXpn/ahmed-shah-masjid-mosque-ahmedabad-78361-15404.jpg"
+      ],
+      "tour_type": "Historical",
+      "trip_title": "Mahasthangarh Visit",
+      "price": "$250"
+    },
+    {
+      "images": [
+        "https://i.ibb.co/87fmNgk/full-shot-woman-reading-beach-23-2150166479.jpg",
+        "https://i.ibb.co/j9Kx9tb/beautiful-nature-tropical-beach-sea-with-chair-coconut-palm-tree-paradise-island-74190-1035.jpg",
+        "https://i.ibb.co/fCm5jV5/umbrella-chair-beautiful-beach-sea-sunrise-time-travel-vacation-74190-7912.jpg"
+      ],
+      "tour_type": "Beach",
+      "trip_title": "Cox's Bazar Relaxation",
+      "price": "$600"
+    },
+    {
+      "images": [
+        "https://i.ibb.co/dLzgNc7/agriculture-hilltribe-women-1150-7345.jpg",
+        "https://i.ibb.co/P4H2tNn/woman-wearing-hill-tribe-dress-strawberry-garden-doi-ang-khang-chiang-mai-thailand-335224-764.jpg",
+        "https://i.ibb.co/K0jFpD0/cool-coffee-india-tea-leaves-forest-1376-24.jpg"
+      ],
+      "tour_type": "Adventure",
+      "trip_title": "Sylhet Tea Gardens Trek",
+      "price": "$350"
+    },
+    {
+      "images": [
+        "https://i.ibb.co/Tc24f31/liberty-concept-with-backpacker-forest-23-2147665130.jpg",
+        "https://i.ibb.co/Vqr56Hj/male-female-tourists-are-enjoying-forest-1150-5703.jpg",
+        "https://i.ibb.co/yq5y9BM/side-view-backpacker-sitting-trees-23-2147665126.jpg"
+      ],
+      "tour_type": "Wildlife",
+      "trip_title": "Lawachara National Park Exploration",
+      "price": "$200"
+    },
+    {
+      "images": [
+        "https://i.ibb.co/tm6SxMC/beautiful-shot-man-standing-landscape-forested-hills-blue-ocean-181624-29735.jpg",
+        "https://i.ibb.co/n73MBfZ/beautiful-shot-woman-standing-cliff-with-landscape-forested-hills-blue-ocean-181624-40459.jpg",
+        "https://i.ibb.co/p0KVj0d/hiker-beautiful-mountain-landscape-23-2147683210.jpg"
+      ],
+      "tour_type": "Cultural",
+      "trip_title": "   ",
+      "price": "$280"
+    },
+    {
+      "images": [
+        "https://i.ibb.co/F33zs4D/beautiful-river-flows-rocks-88194-1485.jpg",
+        "https://i.ibb.co/k8F38Rq/two-woman-tourists-are-mother-daughter-travel-by-boat-with-kayak-happy-sea-morning-summer-ko-adang-i.jpg",
+        "https://i.ibb.co/MN6JSwn/hiker-beautiful-mountain-landscape-23-2147683210.jpg"
+      ],
+      "tour_type": "Adventure",
+      "trip_title": "Kaptai Lake Rafting",
+      "price": "$450"
+    }
+  ]

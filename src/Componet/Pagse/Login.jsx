@@ -62,8 +62,8 @@ const Login = () => {
 
 
     return (
-        <div className='flex justify-center items-center min-h-[calc(100vh-306px)] mt-8'>
-            <div className='flex w-full max-w-sm mx-auto overflow-hidden bg-green-300 rounded-lg shadow-lg  lg:max-w-4xl '>
+        <div className='flex justify-center items-center min-h-[calc(100vh-306px)] '>
+            <div className='flex w-full mt-28 mb-10 max-w-sm mx-auto overflow-hidden bg-green-300 rounded-lg shadow-lg  lg:max-w-4xl '>
                 <div
                     className='hidden bg-cover bg-center lg:block lg:w-1/2'
                     style={{
