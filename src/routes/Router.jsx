@@ -11,6 +11,7 @@ import Blogs from "../Componet/Pagse/Blogs";
 import Contact from "../Componet/Pagse/Contact/Contact";
 import Community from "../Componet/Pagse/Community";
 import About from "../Componet/Pagse/About";
+import AllPackages from "../Pagse/Home/Home/AllPackages";
 
 export const router = createBrowserRouter([
     {
@@ -45,6 +46,10 @@ export const router = createBrowserRouter([
             {
                 path: '/blogs',
                 element: <PrivetRoute><Blogs></Blogs></PrivetRoute>
+            },
+            {
+                path:'/package',
+                element:<AllPackages></AllPackages>
             },
 
         ]

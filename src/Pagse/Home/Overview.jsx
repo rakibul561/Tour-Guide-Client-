@@ -24,6 +24,7 @@ import  { useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import YouTubePlayer from './Video';
+import Packge from './Packge';
 
 function App() {
   const [wishlist, setWishlist] = useState([]);
@@ -72,22 +73,7 @@ function App() {
         </TabPanel>
 
         <TabPanel>
-          <h2>Our Packages</h2>
-          <div className="package-cards">
-            {packages.map((packageItem) => (
-              <div key={packageItem.id} className="package-card">
-                <img src={packageItem.spotPhoto} alt="Spot" />
-                <span className="wishlist-icon" onClick={() => addToWishlist(packageItem.tripTitle)}>
-                  ❤️
-                </span>
-                <p>{packageItem.tourType}</p>
-                <h3>{packageItem.tripTitle}</h3>
-                <p>Price: {packageItem.price}</p>
-                <a href={packageItem.detailsPageLink}>View Package</a>
-              </div>
-            ))}
-          </div>
-          <button onClick={() => console.log('Redirect to All Packages page')}>All Packages</button>
+         <Packge></Packge>
         </TabPanel>
 
         {/* <TabPanel>
