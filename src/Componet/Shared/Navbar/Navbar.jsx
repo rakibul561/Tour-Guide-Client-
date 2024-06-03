@@ -62,7 +62,7 @@ const Navbar = () => {
                     </div>
                     <Link to='/' className='flex gap-2 items-center'>
                     <img className='h-16' src={image} alt='' />
-                    <span className='font-bold text-green-700'>Beautiful Bangladesh</span>
+                    <span className='font-bold text-xl text-black'>Beautiful <span className='text-white'>Bangladesh</span></span>
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">

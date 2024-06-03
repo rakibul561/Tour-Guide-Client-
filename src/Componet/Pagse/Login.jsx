@@ -18,16 +18,18 @@ const Login = () => {
     const navigate = useNavigate();
     // const { signIn, googleLoginUser } = useContext(AuthContext);
 
-    // const handleGooglelogin = async () => {
-    //     const userCredential = await googleLoginUser();
-    //     console.log(userCredential);
-    //     navigate(location?.state ? location.state : "/");
-    //    toast.success("Login succesfully");
+    const { signIn, googleLoginUser } = useContext(AuthContext);
 
-    //     // navigate("/")
-    // }
 
-    const {signIn} = useContext(AuthContext);
+    const handleGooglelogin = async () => {
+        const userCredential = await googleLoginUser();
+        console.log(userCredential);
+        navigate(location?.state ? location.state : "/");
+        toast.success("Login succesfully");
+
+        navigate("/")
+    }
+
 
     const handleLogin = event => {
         event.preventDefault();
@@ -55,8 +57,6 @@ const Login = () => {
 
 
     }
-
-
 
 
 
@@ -107,7 +107,7 @@ const Login = () => {
                             </svg>
                         </div>
 
-                        <span className='w-5/6 px-4 py-3 font-bold text-center'>
+                        <span onClick={handleGooglelogin} className='w-5/6 px-4 py-3 font-bold text-center'>
                             Sign in with Google
                         </span>
                     </div>
@@ -181,7 +181,7 @@ const Login = () => {
                 </div>
             </div>
             <Toaster></Toaster>
-            
+
         </div>
     )
 }
