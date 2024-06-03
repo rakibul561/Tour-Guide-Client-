@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
@@ -8,6 +9,9 @@ const Contact = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>Tour Guide || Support</title>
+            </Helmet>
              <form className="card-body w-3/4 mx-auto ">
                         <div className="grid mt-28 mb-20 bg-base-300 p-8 rounded-lg border-blue-600 grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="form-control">

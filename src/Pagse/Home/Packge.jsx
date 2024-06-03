@@ -16,7 +16,7 @@ const Package = () => {
 
     return (
         <div>
-            <div className="grid md:grid-cols-3 gap-10">
+            <div className="grid md:grid-cols-3 mt-12 gap-10">
                 {data.map(item => (
                     <div key={item.id} className="card lg:h-[500px] bg-base-100 shadow-xl">
                         <figure><img className="" src={item.images} alt="Food" /></figure>
