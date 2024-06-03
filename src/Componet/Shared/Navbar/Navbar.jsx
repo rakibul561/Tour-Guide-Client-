@@ -13,8 +13,8 @@ const Navbar = () => {
     // const {user,logOut} = useContext(AuthContext);
     // const navigate = useNavigate();
     const [userOpen, setUserOpen] = useState();
-    const { user,logOut } = useContext(AuthContext)
-      const navigate = useNavigate()
+    const { user, logOut } = useContext(AuthContext)
+    const navigate = useNavigate()
     //   const { handleModeChnage } = useTheme()
 
 
@@ -31,19 +31,19 @@ const Navbar = () => {
 
 
 
-      const handleLogOUt = async () => {
+    const handleLogOUt = async () => {
         await logOut()
         if (logOut.insertedId) {
-          Swal.fire({
-            title: 'Success!',
-            text: 'User Added successfully',
-            icon: 'success',
-            confirmButtonText: 'Cool'
-          })
+            Swal.fire({
+                title: 'Success!',
+                text: 'User Added successfully',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+            })
 
         }
         navigate("/login")
-      }
+    }
 
 
     return (
@@ -61,8 +61,8 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <Link to='/' className='flex gap-2 items-center'>
-                    <img className='h-16' src={image} alt='' />
-                    <span className='font-bold text-xl text-black'>Beautiful <span className='text-white'>Bangladesh</span></span>
+                        <img className='h-16' src={image} alt='' />
+                        <span className='font-bold text-xl text-black'>Beautiful <span className='text-white'>Bangladesh</span></span>
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -108,17 +108,18 @@ const Navbar = () => {
                             className={`absolute  z-50  ${userOpen ? "block" : "hidden"
                                 } flex flex-col  gap-4  shadow-lg bg-base-200 px-2  py-4 top-16 `}
                         >
-                            <p className="text-sm text-black font-semibold">{user?.displayName}</p>
-                            <p className="text-sm text-black font-semibold">{user?.email}</p>
+                            <Link to="dashboard"><button className=' duration-200 btn btn-sm btn-outline btn-success font-bold px-4 xl:px-6 py-1 rounded cursor-pointe'>Dashboard</button></Link>
 
                             {
                                 user && <button
-                                 
-                                    className="bg-[#FF497C] hover:bg-[#ab3154] duration-200 text-black font-bold px-4 xl:px-6 py-1 rounded cursor-pointer"
+
+                                    className=" duration-200 btn btn-sm btn-outline btn-error text-black font-bold px-4 xl:px-6 py-1 rounded cursor-pointer"
                                     onClick={handleLogOUt}
                                 >
                                     logout
                                 </button>
+
+
                             }
 
                         </div>
