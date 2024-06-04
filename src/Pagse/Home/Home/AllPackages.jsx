@@ -1,15 +1,30 @@
-import { useEffect, useState } from "react";
+
 import Place from "../AllCart/Place";
+import { useQuery } from "@tanstack/react-query";
+import UseAxiosSecore from "../../../Hooks/UseAxiosSecore";
 
 const AllPackages = () => {
-    const [items, setItems] = useState([]);
-    console.log(items);
+    // const [items, setItems] = useState([]);
+    // console.log(items);
 
-    useEffect(() => {
-        fetch('http://localhost:3000/menu')
-            .then(res => res.json())
-            .then(data => setItems(data))
-    }, [])
+
+    const axiosSecure = UseAxiosSecore();
+
+    const { data: items = [], isLoading } = useQuery({
+        queryKey: ['menu'],
+        queryFn: async () => {
+            const { data } = await axiosSecure.get('/menu');
+            return data;
+        }
+    });
+
+    if (isLoading) return <progress className="progress w-56"></progress>;
+
+    // useEffect(() => {
+    //     fetch('menu.json')
+    //         .then(res => res.json())
+    //         .then(data => setItems(data))
+    // }, [])
     return (
         <div>
 

@@ -104,7 +104,7 @@ const Navbar = () => {
 
                             <p className="text-sm text-white font-semibold">{user?.displayName}</p>
                             <p className="text-sm text-white font-semibold">{user?.email}</p>
-                            <Link to="dashboard"><button className=' duration-200 btn btn-sm btn-outline btn-success font-bold px-4 xl:px-6 py-1 rounded cursor-pointe'>Dashboard</button></Link>
+                            <Link to="/dashboard"><button className=' duration-200 btn btn-sm btn-outline btn-success font-bold px-4 xl:px-6 py-1 rounded cursor-pointe'>Dashboard</button></Link>
 
                             {
                                 user && <button

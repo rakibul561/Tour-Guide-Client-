@@ -13,6 +13,8 @@ import Community from "../Componet/Pagse/Community";
 import About from "../Componet/Pagse/About";
 import AllPackages from "../Pagse/Home/Home/AllPackages";
 import Details from "../Pagse/Home/Details";
+import Dashboard from "../DashBoard/Dashboard";
+import MyProfile from "../DashBoard/Pagse/MyProfile";
 
 export const router = createBrowserRouter([
     {
@@ -49,17 +51,27 @@ export const router = createBrowserRouter([
                 element: <PrivetRoute><Blogs></Blogs></PrivetRoute>
             },
             {
-                path:'/package',
-                element:<AllPackages></AllPackages>
+                path: '/package',
+                element: <AllPackages></AllPackages>
             },
             {
                 path: '/details/:id',
                 element: <PrivetRoute
                 >
-                  <Details></Details>
+                    <Details></Details>
                 </PrivetRoute>
-              },
+            },
 
         ]
     },
+    {
+        path: 'dashboard',
+        element: <Dashboard></Dashboard>,
+        children: [
+            {
+               path:'profile',
+               element:<MyProfile></MyProfile>
+            }
+        ]
+    }
 ]);
