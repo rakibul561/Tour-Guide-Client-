@@ -1,11 +1,13 @@
-import { FaAd, FaCalendar, FaEnvelope, FaFileContract, FaHome, FaList, FaShoppingCart, FaUser } from "react-icons/fa";
+import { FaAd, FaCalendar, FaHome, FaList, FaUser } from "react-icons/fa";
 import { FaPersonRifle } from "react-icons/fa6";
 import { FiGitPullRequest } from "react-icons/fi";
-import { IoMenu } from "react-icons/io5";
 import { NavLink, Outlet } from "react-router-dom";
+import useAdmin from "../Hooks/useAdmin";
 
 const Dashboard = () => {
-    const isAdmin = true;
+    // const [isAdmin] = useAdmin();
+    // const isAdmin = true;
+    const [isAdmin] = useAdmin();
     return (
         <div>
             <div className="flex">
@@ -35,13 +37,9 @@ const Dashboard = () => {
                                             Manage Users
                                         </NavLink>
                                     </li>
-                                   
-
                                 </>
                             </>
-                                :
-
-                                <>
+                                : <>
                                     <li>
                                         <NavLink to='/dashboard/profile'>
                                             <FaPersonRifle></FaPersonRifle>
@@ -73,7 +71,7 @@ const Dashboard = () => {
                         }
 
                         <div className="divider">OR</div>
-                        {/* shared navbar Links */}
+                      
                         <div>
                             <li>
                                 <NavLink to='/'>

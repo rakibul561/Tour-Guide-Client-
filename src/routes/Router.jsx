@@ -16,6 +16,7 @@ import Details from "../Pagse/Home/Details";
 import Dashboard from "../DashBoard/Dashboard";
 import MyProfile from "../DashBoard/Pagse/MyProfile";
 import AllUser from "../DashBoard/Pagse/AllUser/AllUser";
+import AdminRoutes from "./AdminRoutes";
 
 export const router = createBrowserRouter([
     {
@@ -67,7 +68,7 @@ export const router = createBrowserRouter([
     },
     {
         path: 'dashboard',
-        element: <Dashboard></Dashboard>,
+        element: <PrivetRoute><Dashboard></Dashboard></PrivetRoute>,
         children: [
             {
                path:'profile',
@@ -76,7 +77,7 @@ export const router = createBrowserRouter([
             // admin routes
             {
                 path:'users',
-                element:<AllUser></AllUser>
+                element:<AdminRoutes><AllUser></AllUser></AdminRoutes>
             }
         ]
     }
