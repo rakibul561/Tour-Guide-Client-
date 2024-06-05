@@ -8,6 +8,7 @@ import img from '../../assets/Login/Login.jpg'
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from '../../Provaider/AuthProvaider';
 import toast, { Toaster } from 'react-hot-toast';
+import usePublic from '../../Hooks/usePublic';
 
 
 
@@ -16,18 +17,31 @@ import toast, { Toaster } from 'react-hot-toast';
 const Login = () => {
     const location = useLocation();
     const navigate = useNavigate();
+    const axiosPublic = usePublic();
     // const { signIn, googleLoginUser } = useContext(AuthContext);
 
     const { signIn, googleLoginUser } = useContext(AuthContext);
 
 
     const handleGooglelogin = async () => {
-        const userCredential = await googleLoginUser();
-        console.log(userCredential);
-        navigate(location?.state ? location.state : "/");
-        toast.success("Login succesfully");
+        const result = await googleLoginUser();
+        console.log(result);
+        const userInfo = {
+            email: result.user?.email,
+            name: result.user?.displayName,
+            photo:result.user?.photoURL,
+        }
+        axiosPublic.post('/users', userInfo)
+        .then(res =>{
+           console.log(res.data);
+           navigate(location?.state ? location.state : "/");
+           toast.success("Login succesfully");
+   
+           navigate("/")
+        })
 
-        navigate("/")
+
+      
     }
 
 

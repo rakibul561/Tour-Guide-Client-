@@ -1,6 +1,7 @@
 
 import Overview from "../Overview";
 import Carosel from "./Caresol";
+import TourType from "./TourType";
 
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
             <div>
                 <Carosel></Carosel>
                 <Overview></Overview>
+                <TourType></TourType>
             </div>
         </div>
     );
