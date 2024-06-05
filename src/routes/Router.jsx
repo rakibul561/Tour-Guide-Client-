@@ -15,6 +15,7 @@ import AllPackages from "../Pagse/Home/Home/AllPackages";
 import Details from "../Pagse/Home/Details";
 import Dashboard from "../DashBoard/Dashboard";
 import MyProfile from "../DashBoard/Pagse/MyProfile";
+import AllUser from "../DashBoard/Pagse/AllUser/AllUser";
 
 export const router = createBrowserRouter([
     {
@@ -71,6 +72,11 @@ export const router = createBrowserRouter([
             {
                path:'profile',
                element:<MyProfile></MyProfile>
+            },
+            // admin routes
+            {
+                path:'users',
+                element:<AllUser></AllUser>
             }
         ]
     }
