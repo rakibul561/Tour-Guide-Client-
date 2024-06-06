@@ -17,6 +17,8 @@ import Dashboard from "../DashBoard/Dashboard";
 import MyProfile from "../DashBoard/Pagse/MyProfile";
 import AllUser from "../DashBoard/Pagse/AllUser/AllUser";
 import AdminRoutes from "./AdminRoutes";
+import Booking from "../Pagse/Booking/Booking";
+import SeeDetails from "../Componet/Pagse/SeeDetails";
 
 export const router = createBrowserRouter([
     {
@@ -63,9 +65,25 @@ export const router = createBrowserRouter([
                     <Details></Details>
                 </PrivetRoute>
             },
+            {
+              path:'/tour/:id',
+              element:<SeeDetails></SeeDetails>
+            },
+            {
+                path:'/booking',
+                element:<Booking></Booking>
+            },
 
         ]
     },
+
+
+
+
+
+
+
+    /* dash board */
     {
         path: 'dashboard',
         element: <PrivetRoute><Dashboard></Dashboard></PrivetRoute>,

@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import UseAxiosSecore from "../../Hooks/UseAxiosSecore";
 import { useQuery } from "@tanstack/react-query";
 import Ask from "./Home/Datils/Ask";
@@ -66,7 +66,11 @@ const Details = () => {
                                         </p>
                                         <p>{relative_information}</p>
                                     </div>
-                                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50">Book Now</button>
+                                   <Link to='/booking'>
+
+                                   <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50">Book Now</button>
+                                   
+                                   </Link>
                                 </div>
                             </div>
                         </div>
