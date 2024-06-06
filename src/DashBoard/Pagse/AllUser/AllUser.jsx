@@ -11,7 +11,9 @@ const AllUser = () => {
             const res = await axiosSecure.get('/users',);
             return res.data;
         }
+        
     });
+    
 
     const handleMakeAdmin = (role, user) => {
         axiosSecure.patch(`/users/admin/${user._id}`, { role: role })
