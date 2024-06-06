@@ -2,6 +2,8 @@ import { Link, useParams } from "react-router-dom";
 import UseAxiosSecore from "../../Hooks/UseAxiosSecore";
 import { useQuery } from "@tanstack/react-query";
 import Ask from "./Home/Datils/Ask";
+import Community from "../../Componet/Pagse/Community";
+import { Helmet } from "react-helmet-async";
 
 
 const Details = () => {
@@ -23,6 +25,9 @@ const Details = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Tour || Details</title>
+            </Helmet>
             <div>
                 <h2 className="text-4xl font-bold lg:ml-32 mt-20 text-blue-600">Tour sports</h2>
                 <section className="py-6 dark:bg-gray-100 md:w-3/4 mx-auto mt-20 dark:text-gray-900">
@@ -41,6 +46,10 @@ const Details = () => {
                         )
                     }
                 </section>
+            </div>
+            <div>
+                <h2 className="text-3xl font-semibold text-green-700 ml-4 lg:ml-44 mt-4">Tour Team Guide</h2>
+                <Community></Community>
             </div>
             <div>
                 <Ask></Ask>

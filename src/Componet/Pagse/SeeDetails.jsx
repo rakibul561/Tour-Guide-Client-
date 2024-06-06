@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 import UseAxiosSecure from "../../Hooks/UseAxiosSecore";
+import { Helmet } from "react-helmet-async";
 
 
 const SeeDetails = () => {
@@ -25,6 +26,9 @@ const SeeDetails = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Tour || Guide</title>
+            </Helmet>
             <div className="flex mt-12 mb-12 mx-auto flex-col justify-center max-w-xl p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
                 <img src={users.photo} alt="" className="w-64 h-64 mx-auto rounded-full dark:bg-gray-500 aspect-square" />
 

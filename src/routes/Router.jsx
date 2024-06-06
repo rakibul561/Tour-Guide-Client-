@@ -19,6 +19,7 @@ import AllUser from "../DashBoard/Pagse/AllUser/AllUser";
 import AdminRoutes from "./AdminRoutes";
 import Booking from "../Pagse/Booking/Booking";
 import SeeDetails from "../Componet/Pagse/SeeDetails";
+import AddItem from "../DashBoard/Admin/AddItem";
 
 export const router = createBrowserRouter([
     {
@@ -96,6 +97,10 @@ export const router = createBrowserRouter([
             {
                 path:'users',
                 element:<AdminRoutes><AllUser></AllUser></AdminRoutes>
+            },
+            {
+                path:'addpackage',
+                element:<AddItem></AddItem>
             }
         ]
     }

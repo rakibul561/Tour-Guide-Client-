@@ -1,30 +1,10 @@
-// import { useState } from 'react';
-// import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-// import 'react-tabs/style/react-tabs.css';
-// const Overview = () => {
-//     const [tabIndex, setTabindex] = useState(0);
-//     return (
-//         <div className='text-center mt-8'>
-//             <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabindex(index)}>
-//                 <TabList>
-//                     <Tab>Overview</Tab>
-//                     <Tab>Our Packages</Tab>
-//                     <Tab>Meet Our Tour Guides</Tab>
-//                 </TabList>
-//                 <TabPanel></TabPanel>
-//                 <TabPanel></TabPanel>
-//                 <TabPanel></TabPanel>
-//             </Tabs>
-//         </div>
-//     );
-// };
 
-// export default Overview;
 import  { useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import YouTubePlayer from './Video';
 import Packge from './Packge';
+import Community from '../../Componet/Pagse/Community';
 
 function App() {
   const [wishlist, setWishlist] = useState([]);
@@ -76,19 +56,11 @@ function App() {
          <Packge></Packge>
         </TabPanel>
 
-        {/* <TabPanel>
-          <h2>Meet Our Tour Guides</h2>
-          <div className="tour-guides">
-            {tourGuides.map((guide) => (
-              <div key={guide.id} className="tour-guide-card">
-                <h3>{guide.name}</h3>
-                <p>Specialty: {guide.specialty}</p>
-                <p>Experience: {guide.experience}</p>
-                <a href={guide.detailsPageLink}>Details</a>
-              </div>
-            ))}
+        <TabPanel>
+          <div>
+            <Community></Community>
           </div>
-        </TabPanel> */}
+        </TabPanel>
       </Tabs>
     </div>
   );
