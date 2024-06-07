@@ -9,6 +9,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from '../../Provaider/AuthProvaider';
 import toast, { Toaster } from 'react-hot-toast';
 import usePublic from '../../Hooks/usePublic';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -78,6 +79,9 @@ const Login = () => {
 
     return (
         <div className='flex justify-center items-center min-h-[calc(100vh-306px)] '>
+            <Helmet>
+                <title>Login || Pagse</title>
+            </Helmet>
             <div className='flex w-full mt-28 mb-10 max-w-sm mx-auto overflow-hidden bg-green-300 rounded-lg shadow-lg  lg:max-w-4xl '>
                 <div
                     className='hidden bg-cover bg-center lg:block lg:w-1/2'

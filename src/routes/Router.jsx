@@ -20,6 +20,7 @@ import AdminRoutes from "./AdminRoutes";
 import Booking from "../Pagse/Booking/Booking";
 import SeeDetails from "../Componet/Pagse/SeeDetails";
 import AddItem from "../DashBoard/Admin/AddItem";
+import MyBooking from "../UserDashBoard/MyBooking";
 
 export const router = createBrowserRouter([
     {
@@ -67,12 +68,13 @@ export const router = createBrowserRouter([
                 </PrivetRoute>
             },
             {
-              path:'/tour/:id',
-              element:<SeeDetails></SeeDetails>
+                path: '/tour/:id',
+                element: <SeeDetails></SeeDetails>
             },
             {
-                path:'/booking',
-                element:<Booking></Booking>
+                path: '/booking/:id',
+                element: <Booking></Booking>,
+                loader: ({params}) => fetch(`http://localhost:5000/menu/${params.id}`)
             },
 
         ]
@@ -90,17 +92,21 @@ export const router = createBrowserRouter([
         element: <PrivetRoute><Dashboard></Dashboard></PrivetRoute>,
         children: [
             {
-               path:'profile',
-               element:<MyProfile></MyProfile>
+                path: 'profile',
+                element: <MyProfile></MyProfile>
             },
             // admin routes
             {
-                path:'users',
-                element:<AdminRoutes><AllUser></AllUser></AdminRoutes>
+                path: 'users',
+                element: <AdminRoutes><AllUser></AllUser></AdminRoutes>
             },
             {
-                path:'addpackage',
-                element:<AddItem></AddItem>
+                path: 'addpackage',
+                element: <AddItem></AddItem>
+            },
+            {
+                path:'bookings',
+                element:<MyBooking></MyBooking>
             }
         ]
     }

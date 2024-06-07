@@ -75,7 +75,7 @@ const Details = () => {
                                         </p>
                                         <p>{relative_information}</p>
                                     </div>
-                                    <Link to='/booking'>
+                                    <Link to={`/booking/${id}`}>
 
                                         <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50">Book Now</button>
 
