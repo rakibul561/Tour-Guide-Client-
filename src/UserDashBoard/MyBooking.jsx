@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import UseAuth from "../Hooks/UseAuth";
 import BookingRow from "./BookingRow";
+import toast, { Toaster } from "react-hot-toast";
 
 const MyBooking = () => {
     const { user } = UseAuth();
@@ -14,6 +15,27 @@ const MyBooking = () => {
             .then(res => res.json())
             .then(data => setBookings(data))
     }, [])
+
+
+
+    
+    const handleDelete = id =>{
+        const proced = confirm('Are you sure you want to Delete')
+        if(proced){
+            fetch(`http://localhost:5000/booking/${id}`, {
+                method:'DELETE'
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if(data.deletedCount > 0){
+                 toast.success('package deleted')
+                 const remaing = bookings.filter(booking => booking._id !== id)
+                 setBookings(remaing)
+                }
+            })
+        }
+    }
 
 
     return (
@@ -39,6 +61,7 @@ const MyBooking = () => {
                             bookings.map(booking => <BookingRow
                             key={booking._id}
                             booking={booking}
+                            handleDelete={handleDelete}
                             ></BookingRow> )
                         }
                        
@@ -49,6 +72,7 @@ const MyBooking = () => {
 
                 </table>
             </div>
+            <Toaster></Toaster>
         </div>
     );
 };
