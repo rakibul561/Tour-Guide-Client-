@@ -39,7 +39,7 @@ const Details = () => {
                                 </div>
                                 <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-2">
                                     {images.slice(1, 3).map((img, index) => (
-                                        <img key={index} alt="" className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square" src={img} />
+                                        <img key={index} alt="" className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square" src={img && img} />
                                     ))}
                                 </div>
                             </>
@@ -75,11 +75,11 @@ const Details = () => {
                                         </p>
                                         <p>{relative_information}</p>
                                     </div>
-                                   <Link to='/booking'>
+                                    <Link to='/booking'>
 
-                                   <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50">Book Now</button>
-                                   
-                                   </Link>
+                                        <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50">Book Now</button>
+
+                                    </Link>
                                 </div>
                             </div>
                         </div>
