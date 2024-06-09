@@ -21,6 +21,9 @@ import Booking from "../Pagse/Booking/Booking";
 import SeeDetails from "../Componet/Pagse/SeeDetails";
 import AddItem from "../DashBoard/Admin/AddItem";
 import MyBooking from "../UserDashBoard/MyBooking";
+import Profile from "../UserDashBoard/Profile";
+import Story from "../UserDashBoard/Story";
+import MyWhislist from "../UserDashBoard/MyWhislist";
 
 export const router = createBrowserRouter([
     {
@@ -104,9 +107,22 @@ export const router = createBrowserRouter([
                 path: 'addpackage',
                 element: <AddItem></AddItem>
             },
+            // user reative 
             {
                 path:'bookings',
                 element:<MyBooking></MyBooking>
+            },
+            {
+                path:'userProfile',
+                element:<Profile></Profile>
+            },
+            {
+                path:'userProfile/profile',
+                element:<Story></Story>
+            },
+            {
+                path:'love',
+                element:<MyWhislist></MyWhislist>
             }
         ]
     }

@@ -8,32 +8,32 @@ const MyBooking = () => {
 
     const [bookings, setBookings] = useState([]);
 
-    const url = `http://localhost:5000/booking?.email=${user?.email}`
+    const url = `http://localhost:5000/booking/${user?.email}`
 
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
             .then(data => setBookings(data))
-    }, [])
+    }, [url])
+    console.log(bookings);
 
 
 
-    
-    const handleDelete = id =>{
+    const handleDelete = id => {
         const proced = confirm('Are you sure you want to Delete')
-        if(proced){
+        if (proced) {
             fetch(`http://localhost:5000/booking/${id}`, {
-                method:'DELETE'
+                method: 'DELETE'
             })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if(data.deletedCount > 0){
-                 toast.success('package deleted')
-                 const remaing = bookings.filter(booking => booking._id !== id)
-                 setBookings(remaing)
-                }
-            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount > 0) {
+                        toast.success('package deleted')
+                        const remaing = bookings.filter(booking => booking._id !== id)
+                        setBookings(remaing)
+                    }
+                })
         }
     }
 
@@ -45,7 +45,7 @@ const MyBooking = () => {
                     {/* head */}
                     <thead>
                         <tr>
-                            
+
                             <th>Package Name</th>
                             <th> Guide Name</th>
                             <th> Tour Date</th>
@@ -56,19 +56,19 @@ const MyBooking = () => {
                     </thead>
                     <tbody>
                         {/* row 1 */}
-                        
+
                         {
                             bookings.map(booking => <BookingRow
-                            key={booking._id}
-                            booking={booking}
-                            handleDelete={handleDelete}
-                            ></BookingRow> )
+                                key={booking._id}
+                                booking={booking}
+                                handleDelete={handleDelete}
+                            ></BookingRow>)
                         }
-                       
-                       
+
+
                     </tbody>
-                
-                  
+
+
 
                 </table>
             </div>

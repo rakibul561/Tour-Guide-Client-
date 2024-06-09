@@ -83,9 +83,9 @@ const Dashboard = () => {
                         {
                             singleUser?.role === "user" && <>
                                 <li>
-                                    <NavLink to='/dashboard/profile'>
+                                    <NavLink to='/dashboard/userProfile'>
                                         <FaPersonRifle></FaPersonRifle>
-                                        My Profile
+                                       Profile
                                     </NavLink>
                                 </li>
                                 <li>
