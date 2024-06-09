@@ -1,41 +1,55 @@
 import { useEffect, useState } from "react";
 import UseAuth from "../Hooks/UseAuth";
 import WishlistCart from "./WishlistCart";
+import toast from "react-hot-toast";
 
 const MyWhislist = () => {
     const { user } = UseAuth();
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        if (user?.email) {
-            fetch(`http://localhost:5000/wishlist/${user?.email}`)
-                .then(res => {
-                    if (!res.ok) {
-                        throw new Error("Network response was not ok");
-                    }
-                    return res.json();
-                })
-                .then(data => {
-                    setUsers(data);
-                })
-                .catch(error => {
-                    console.error("There was a problem with the fetch operation:", error);
-                });
-        }
-    }, [user]);
-    // console.log(users);
+        fetch(`http://localhost:5000/wishlist`)
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data);
+                setUsers(data);
+            });
+    }, [user])
+    console.log(users);
+   
 
-    return (
-        <div className="grid grid-col-1 lg:grid-cols-3 gap-4">
-            {
-                users.map(cart=> <WishlistCart
+const handleDeleteLove = id => {
+    console.log(id);
+    const proced = confirm('Are you sure you want to Delete')
+    if (proced) {
+        fetch(`http://localhost:5000/wishlist/${id}`, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.deletedCount > 0) {
+                    toast.success('package deleted')
+                    const remaing = users.filter(wishlist => wishlist._id !== id)
+                    setUsers(remaing)
+                }
+            })
+    }
+}
+
+
+return (
+    <div className="grid grid-col-1 lg:grid-cols-3 gap-4">
+        {
+            users.map(cart => <WishlistCart
                 key={cart._id}
                 cart={cart}
-                ></WishlistCart>)
-            }
-           
-        </div>
-    );
+                handleDeleteLove={handleDeleteLove}
+            ></WishlistCart>)
+        }
+
+    </div>
+);
 };
 
 export default MyWhislist;

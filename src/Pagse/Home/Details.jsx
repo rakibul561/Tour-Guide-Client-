@@ -59,7 +59,7 @@ const Details = () => {
                 <section>
                     <div>
                         <div>
-                            <h2 className="text-3xl font-bold text-blue-600 mb-8 lg:ml-44">Booking Page</h2>
+                            <h2 className="text-3xl font-bold text-blue-600 mb-8 lg:ml-44">Booking Pagse</h2>
                             <div className="md:w-3/4 mx-auto rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
                                 {images.length > 0 && (
                                     <img src={images[0]} alt="" className="object-cover object-center w-full rounded-t-md h-[400px] dark:bg-gray-500" />

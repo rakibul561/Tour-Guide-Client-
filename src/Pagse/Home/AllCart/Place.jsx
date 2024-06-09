@@ -7,7 +7,7 @@ import UseAuth from "../../../Hooks/UseAuth";
 const Place = ({ item }) => {
     // eslint-disable-next-line no-unused-vars
     const {user} = UseAuth();
-    const {email } = user;
+    // const {email} = user;
     const { _id, images, trip_title, tour_type, price, description } = item;
     // console.log(item);
 
@@ -20,7 +20,7 @@ const Place = ({ item }) => {
             tour_type,
             price,
             description,
-            email,
+            email:user?.email,
             
         };
         fetch("http://localhost:5000/wishlist", {

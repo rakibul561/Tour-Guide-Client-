@@ -3,6 +3,7 @@
 
 const BookingRow = ({ booking,handleDelete }) => {
     const { service, _id, price, role, date, status } = booking;
+ 
 
 
 

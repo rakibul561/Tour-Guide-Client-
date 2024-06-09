@@ -24,6 +24,8 @@ import MyBooking from "../UserDashBoard/MyBooking";
 import Profile from "../UserDashBoard/Profile";
 import Story from "../UserDashBoard/Story";
 import MyWhislist from "../UserDashBoard/MyWhislist";
+import WishDetails from "../UserDashBoard/WishDetails"; // WishDetails কম্পোনেন্ট আমদানি করুন
+import MyAssignTour from "../GuideDashboard/MyAssignTour";
 
 export const router = createBrowserRouter([
     {
@@ -65,10 +67,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/details/:id',
-                element: <PrivetRoute
-                >
-                    <Details></Details>
-                </PrivetRoute>
+                element: <PrivetRoute><Details></Details></PrivetRoute>
             },
             {
                 path: '/tour/:id',
@@ -77,17 +76,15 @@ export const router = createBrowserRouter([
             {
                 path: '/booking/:id',
                 element: <Booking></Booking>,
-                loader: ({params}) => fetch(`http://localhost:5000/menu/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/menu/${params.id}`)
             },
-
+            {
+                path: '/wishlist/:id',
+                element: <WishDetails></WishDetails>,
+                loader: ({ params }) => fetch(`http://localhost:5000/wishlis/${params.id}`)
+            }
         ]
     },
-
-
-
-
-
-
 
     /* dash board */
     {
@@ -109,20 +106,29 @@ export const router = createBrowserRouter([
             },
             // user reative 
             {
-                path:'bookings',
-                element:<MyBooking></MyBooking>
+                path: 'bookings',
+                element: <MyBooking></MyBooking>
             },
             {
-                path:'userProfile',
-                element:<Profile></Profile>
+                path: 'userProfile',
+                element: <Profile></Profile>
             },
             {
-                path:'userProfile/profile',
-                element:<Story></Story>
+                path: 'userProfile/profile',
+                element: <Story></Story>
             },
             {
-                path:'love',
-                element:<MyWhislist></MyWhislist>
+                path: 'love',
+                element: <MyWhislist></MyWhislist>
+            },
+            {
+                path: 'wishlist/:id',
+                element: <WishDetails></WishDetails>,
+                loader: ({ params }) => fetch(`http://localhost:5000/wishlis/${params.id}`)
+            },
+            {
+                path:'assigned',
+                element:<MyAssignTour></MyAssignTour>
             }
         ]
     }

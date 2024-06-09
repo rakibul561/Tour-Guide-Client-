@@ -1,12 +1,35 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useFetcher, useLoaderData } from "react-router-dom";
 import UseAuth from "../../Hooks/UseAuth";
 import Swal from "sweetalert2";
+import UseAxiosSecure from "../../Hooks/UseAxiosSecore";
+import { useQuery } from "@tanstack/react-query";
+import { useEffect, useState } from "react";
 
 
 const Booking = () => {
     const { user } = UseAuth();
     const booking = useLoaderData();
     const { images, trip_title, price, _id } = booking;
+
+
+
+    const axiosSecure = UseAxiosSecure();
+    const [guide, setGuide] = useState([]);
+    const { data: users = [], isLoading, error } = useQuery({
+        queryKey: ['users'],
+        queryFn: async () => {
+            // const res = await axiosSecure.get('/users');
+            const res = await axiosSecure.get('/users');
+            return res.data;
+        }
+    });
+
+
+
+    useEffect(() => {
+        const filterData = users?.filter(user => user?.role === "Tour Guide")
+        setGuide(filterData)
+    }, [users])
 
 
     // console.log(user);
@@ -19,19 +42,20 @@ const Booking = () => {
         const name = form.name.value;
         const date = form.date.value;
         const email = user?.email;
-        const role = form.role.value;
+        const rider = form.role.value;
+        console.log(rider);
         const order = {
             customerName: name,
             email,
             images,
-            role,
+            rider,
             date,
             service_id: _id,
             service: trip_title,
             price: price,
             status: 'In Review'
         }
-        console.log(order);
+        
         fetch('http://localhost:5000/booking', {
             method: 'POST',
             headers: {
@@ -79,10 +103,12 @@ const Booking = () => {
                             </label>
                             <select name="role"
                                 className="select select-bordered w-full ">
-                                <option value="Rakibul Hasan">Rakibul Hasan</option>
-                                <option value="Olivia Martinez">Olivia Martinez</option>
-                                <option value="Alexander Johnson">Alexander Johnson</option>
-                                <option value="Noah Wright">Noah Wright</option>
+                                {
+                                    guide && guide?.map(user => (
+                                        <option key={user?._id} value={user?._id}>{user?.name}</option>
+                                    ))
+                                }
+
 
                             </select>
                         </div>
@@ -109,7 +135,7 @@ const Booking = () => {
                     </div>
                     <div className="form-control w-3/4 mx-auto mt-6">
 
-                    <input className="btn  bg-success btn-block" type="submit" value=" Confrom Bookings" />
+                        <input className="btn  bg-success btn-block" type="submit" value=" Confrom Bookings" />
 
                     </div>
 

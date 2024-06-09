@@ -69,7 +69,7 @@ const Dashboard = () => {
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='/dashboard/bookings'>
+                                    <NavLink to='/dashboard/assigned'>
                                         <FaList></FaList>
                                         My Assigned tour
 
