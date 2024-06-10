@@ -2,7 +2,7 @@ const YouTubePlayer = () => {
     // const videoUrl = `https://www.youtube.com/embed/${videoId}`;
 
     return (
-        <div className="flex gap-12 justify-center mt-24 mb-14">
+        <div className="grid  md:grid-cols-2 lg:ml-24 mt-24 mb-14">
             <div>
                 <iframe
                     width="560"

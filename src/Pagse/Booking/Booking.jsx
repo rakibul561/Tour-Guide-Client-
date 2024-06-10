@@ -55,8 +55,8 @@ const Booking = () => {
             price: price,
             status: 'In Review'
         }
-        
-        fetch('http://localhost:5000/booking', {
+
+        fetch('https://tour-guide-server-six.vercel.app/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

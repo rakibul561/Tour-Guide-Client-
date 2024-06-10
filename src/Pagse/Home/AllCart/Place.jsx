@@ -6,7 +6,7 @@ import UseAuth from "../../../Hooks/UseAuth";
 
 const Place = ({ item }) => {
     // eslint-disable-next-line no-unused-vars
-    const {user} = UseAuth();
+    const { user } = UseAuth();
     // const {email} = user;
     const { _id, images, trip_title, tour_type, price, description } = item;
     // console.log(item);
@@ -20,10 +20,10 @@ const Place = ({ item }) => {
             tour_type,
             price,
             description,
-            email:user?.email,
-            
+            email: user?.email,
+
         };
-        fetch("http://localhost:5000/wishlist", {
+        fetch("https://tour-guide-server-six.vercel.app/wishlist", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(newData),
@@ -40,12 +40,12 @@ const Place = ({ item }) => {
         <div>
             <div key={item._id} className=" p-6 rounded-md shadow-md dark:bg-gray-50 dark:text-gray-900">
                 <img src={item.images} alt="" className="object-cover  object-center w-full rounded-md h-72 dark:bg-gray-500" />
-                
-                    <button onClick={handleButton} className="absolute  ml-20 lg:ml-96 px-4 text-3xl">
-                        <FaHeartbeat>
-                        </FaHeartbeat>
-                    </button>
-                    
+
+                <button onClick={handleButton} className="absolute  ml-20 lg:ml-96 px-4 text-3xl">
+                    <FaHeartbeat>
+                    </FaHeartbeat>
+                </button>
+
                 <p className=" absolute  mr-4 px-4 bg-slate-900 text-white">{price}</p>
 
                 <h2 className="text-center mt-8 text-2xl">{item.trip_title}</h2>

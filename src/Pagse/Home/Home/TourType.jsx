@@ -33,7 +33,7 @@ const TourType = () => {
 
 
     return (
-        <div className="text-center ">
+        <div className="text-center mb-12">
 
             <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                 <TabList>

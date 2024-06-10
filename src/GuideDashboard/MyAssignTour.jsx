@@ -14,8 +14,7 @@ const MyAssignTour = () => {
 
     const [books, setBooks] = useState([]);
     const [assingedData, setAssignedData] = useState([])
-
-    const url = `http://localhost:5000/booking`
+    const url = `https://tour-guide-server-six.vercel.app/booking`
 
     useEffect(() => {
         fetch(url)
@@ -37,7 +36,7 @@ const MyAssignTour = () => {
             <div className="flex justify-between text-2xl mb-20 border p-4 rounded-lg">
                 <h1> {user?.displayName} </h1>
                 <h2 className="font-bold ">My Assigned Tours </h2>
-                
+
                 <h2 className=" font-bold"> {user?.email}</h2>
             </div>
 

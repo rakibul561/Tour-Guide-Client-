@@ -8,7 +8,7 @@ const MyWhislist = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/wishlist/${user?.email}`)
+        fetch(`https://tour-guide-server-six.vercel.app/wishlist/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
@@ -16,40 +16,39 @@ const MyWhislist = () => {
             });
     }, [user])
     console.log(users);
-   
 
-const handleDeleteLove = id => {
-    console.log(id);
-    const proced = confirm('Are you sure you want to Delete')
-    if (proced) {
-        fetch(`http://localhost:5000/wishlist/${id}`, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.deletedCount > 0) {
-                    toast.success('package deleted')
-                    const remaing = users.filter(wishlist => wishlist._id !== id)
-                    setUsers(remaing)
-                }
+
+    const handleDeleteLove = id => {
+
+        if (id) {
+            fetch(`https://tour-guide-server-six.vercel.app/wishlist/${id}`, {
+                method: 'DELETE'
             })
-    }
-}
-
-
-return (
-    <div className="grid grid-col-1 lg:grid-cols-3 gap-4">
-        {
-            users.map(cart => <WishlistCart
-                key={cart._id}
-                cart={cart}
-                handleDeleteLove={handleDeleteLove}
-            ></WishlistCart>)
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount > 0) {
+                        toast.success('package deleted')
+                        const remaing = users.filter(wishlist => wishlist._id !== id)
+                        setUsers(remaing)
+                    }
+                })
         }
+    }
 
-    </div>
-);
+
+    return (
+        <div className="grid grid-col-1 lg:grid-cols-3 gap-4">
+            {
+                users.map(cart => <WishlistCart
+                    key={cart._id}
+                    cart={cart}
+                    handleDeleteLove={handleDeleteLove}
+                ></WishlistCart>)
+            }
+
+        </div>
+    );
 };
 
 export default MyWhislist;
