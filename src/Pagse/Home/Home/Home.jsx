@@ -15,6 +15,7 @@ const Home = () => {
                 <Carosel></Carosel>
                 <Overview></Overview>
                 <TourType></TourType>
+                
             </div>
         </div>
     );

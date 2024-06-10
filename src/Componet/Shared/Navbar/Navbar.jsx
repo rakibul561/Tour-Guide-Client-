@@ -19,11 +19,11 @@ const Navbar = () => {
 
 
     const navLink = <>
-        <a><NavLink to='/'>Home</NavLink></a>
-        <a><NavLink to='/community'>Community</NavLink></a>
-        <a><NavLink to='/blogs'> Blogs</NavLink></a>
-        <a><NavLink to='/about'> About Us</NavLink></a>
-        <a><NavLink to='/contact'> Contact Us</NavLink></a>
+        <li><NavLink to='/'>Home</NavLink></li>
+        <li><NavLink to='/community'>Community</NavLink></li>
+        <li><NavLink to='/blogs'> Blogs</NavLink></li>
+        <li><NavLink to='/about'> About Us</NavLink></li>
+        <li><NavLink to='/contact'> Contact Us</NavLink></li>
 
 
     </>
@@ -65,7 +65,7 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal gap-8 px-1">
+                    <ul className="menu menu-horizontal gap-2 px-1">
                         {navLink}
                     </ul>
                 </div>

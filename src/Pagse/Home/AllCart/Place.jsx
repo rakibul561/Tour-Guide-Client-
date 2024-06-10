@@ -45,9 +45,7 @@ const Place = ({ item }) => {
                         <FaHeartbeat>
                         </FaHeartbeat>
                     </button>
-             
-
-
+                    
                 <p className=" absolute  mr-4 px-4 bg-slate-900 text-white">{price}</p>
 
                 <h2 className="text-center mt-8 text-2xl">{item.trip_title}</h2>

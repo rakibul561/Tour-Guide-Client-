@@ -8,7 +8,7 @@ const MyWhislist = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/wishlist`)
+        fetch(`http://localhost:5000/wishlist/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data);

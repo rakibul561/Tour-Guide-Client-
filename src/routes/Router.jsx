@@ -78,11 +78,11 @@ export const router = createBrowserRouter([
                 element: <Booking></Booking>,
                 loader: ({ params }) => fetch(`http://localhost:5000/menu/${params.id}`)
             },
-            {
-                path: '/wishlist/:id',
-                element: <WishDetails></WishDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/wishlis/${params.id}`)
-            }
+                {
+                    path: '/wishlist/:id',
+                    element: <WishDetails></WishDetails>,
+                    loader: ({ params }) => fetch(`http://localhost:5000/heart/${params.id}`)
+                }
         ]
     },
 
@@ -124,7 +124,7 @@ export const router = createBrowserRouter([
             {
                 path: 'wishlist/:id',
                 element: <WishDetails></WishDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/wishlis/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/heart/${params.id}`)
             },
             {
                 path:'assigned',
