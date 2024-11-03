@@ -1,0 +1,112 @@
+[
+    {
+      "images": [
+        "https://i.ibb.co/FxFVZy9/young-woman-standing-dirty-river-23-2147770351.jpg",
+        "https://i.ibb.co/Jx1FKxR/autumn-background-670008-2442.jpg",
+        "https://i.ibb.co/rxtzgjX/rear-view-people-walking-footbridge-forest-1048944-27498828.jpg"
+      ],
+      "tour_type": "Adventure",
+      "trip_title": "Sundarbans Exploration",
+      "price": "$500",
+      "description": "Experience the adventure of a lifetime in the Sundarbans. This exploration tour will take you through the world's largest mangrove forest, home to the Bengal tiger and a myriad of other wildlife. Perfect for thrill-seekers and nature enthusiasts.",
+      "relative_information": "The Sundarbans is a UNESCO World Heritage Site known for its unique ecosystem. The tour includes boat rides, jungle treks, and opportunities to spot rare wildlife."
+    },
+    {
+      "images": [
+        "https://i.ibb.co/Gv1CJF9/palace-king-mahal-kingdom-shiva-1376-66.jpg",
+        "https://i.ibb.co/0DmtgRD/beautiful-shot-lodhi-garden-delhi-india-cloudy-sky-181624-26937.jpg",
+        "https://i.ibb.co/n6Nrvkr/people-perform-morning-worship-maheshwar-fort-temple-sacred-river-narmada-maheshwar-madhya-pradesh-i.jpg"
+      ],
+      "tour_type": "Cultural",
+      "trip_title": "Dhaka Heritage Tour",
+      "price": "$300",
+      "description": "Dive into the rich cultural heritage of Dhaka. This tour will guide you through the historic landmarks, bustling markets, and vibrant traditions of Bangladesh's capital. Ideal for history buffs and cultural enthusiasts.",
+      "relative_information": "Dhaka, the capital of Bangladesh, is known for its historical significance and cultural richness. The tour includes visits to historic sites like Lalbagh Fort, Ahsan Manzil, and various museums."
+    },
+    {
+      "images": [
+        "https://i.ibb.co/fpqn3cd/high-angle-view-man-hiking-against-mountains-1048944-20920933.jpg",
+        "https://i.ibb.co/zbRmdqY/hikers-pointing-towards-mountains-23-2147683215.jpg",
+        "https://i.ibb.co/C5rd9fy/group-tourists-walking-through-narrow-path-mountain-181624-19684.jpg"
+      ],
+      "tour_type": "Nature",
+      "trip_title": "Chittagong Hill Tracts Trek",
+      "price": "$400",
+      "description": "Explore the natural beauty of the Chittagong Hill Tracts. This trekking tour will take you through picturesque landscapes, dense forests, and serene rivers. Perfect for nature lovers and adventure seekers.",
+      "relative_information": "The Chittagong Hill Tracts is a region of natural beauty and cultural diversity. The trek includes visits to tribal villages, waterfalls, and scenic viewpoints."
+    },
+    {
+      "images": [
+        "https://i.ibb.co/9NrdQ6D/beautiful-view-isa-khan-s-tomb-new-india-sunny-day-181624-60326.jpg",
+        "https://i.ibb.co/0DmtgRD/beautiful-shot-lodhi-garden-delhi-india-cloudy-sky-181624-26937.jpg",
+        "https://i.ibb.co/r78vXpn/ahmed-shah-masjid-mosque-ahmedabad-78361-15404.jpg"
+      ],
+      "tour_type": "Historical",
+      "trip_title": "Mahasthangarh Visit",
+      "price": "$250",
+      "description": "Journey back in time with a visit to Mahasthangarh, one of the oldest archaeological sites in Bangladesh. This tour is perfect for history enthusiasts and those interested in ancient civilizations.",
+      "relative_information": "Mahasthangarh is an ancient city dating back to the 3rd century BCE. The tour includes visits to ancient ruins, temples, and museums."
+    },
+    {
+      "images": [
+        "https://i.ibb.co/87fmNgk/full-shot-woman-reading-beach-23-2150166479.jpg",
+        "https://i.ibb.co/j9Kx9tb/beautiful-nature-tropical-beach-sea-with-chair-coconut-palm-tree-paradise-island-74190-1035.jpg",
+        "https://i.ibb.co/fCm5jV5/umbrella-chair-beautiful-beach-sea-sunrise-time-travel-vacation-74190-7912.jpg"
+      ],
+      "tour_type": "Beach",
+      "trip_title": "Cox's Bazar Relaxation",
+      "price": "$600",
+      "description": "Unwind and relax at the world's longest natural sea beach, Cox's Bazar. This tour is designed for those looking to escape the hustle and bustle and enjoy some peaceful beach time.",
+      "relative_information": "Cox's Bazar is famous for its long sandy beach and beautiful sunsets. The tour includes beach activities, relaxation spots, and visits to nearby attractions."
+    },
+    {
+      "images": [
+        "https://i.ibb.co/dLzgNc7/agriculture-hilltribe-women-1150-7345.jpg",
+        "https://i.ibb.co/P4H2tNn/woman-wearing-hill-tribe-dress-strawberry-garden-doi-ang-khang-chiang-mai-thailand-335224-764.jpg",
+        "https://i.ibb.co/K0jFpD0/cool-coffee-india-tea-leaves-forest-1376-24.jpg"
+      ],
+      "tour_type": "Adventure",
+      "trip_title": "Sylhet Tea Gardens Trek",
+      "price": "$350",
+      "description": "Embark on an adventurous trek through the lush tea gardens of Sylhet. This tour offers stunning views, fresh air, and a chance to learn about tea cultivation. Ideal for adventure and nature lovers.",
+      "relative_information": "Sylhet is known for its tea gardens and natural beauty. The trek includes visits to tea estates, natural reserves, and scenic spots."
+    },
+    {
+      "images": [
+        "https://i.ibb.co/Tc24f31/liberty-concept-with-backpacker-forest-23-2147665130.jpg",
+        "https://i.ibb.co/Vqr56Hj/male-female-tourists-are-enjoying-forest-1150-5703.jpg",
+        "https://i.ibb.co/yq5y9BM/side-view-backpacker-sitting-trees-23-2147665126.jpg"
+      ],
+      "tour_type": "Wildlife",
+      "trip_title": "Lawachara National Park Exploration",
+      "price": "$200",
+      "description": "Discover the rich wildlife of Lawachara National Park. This exploration tour offers a chance to see rare animals and birds in their natural habitat. Perfect for wildlife enthusiasts and nature lovers.",
+      "relative_information": "Lawachara National Park is a sanctuary for various species of flora and fauna. The tour includes guided walks, wildlife spotting, and educational sessions."
+    },
+    {
+      "images": [
+        "https://i.ibb.co/tm6SxMC/beautiful-shot-man-standing-landscape-forested-hills-blue-ocean-181624-29735.jpg",
+        "https://i.ibb.co/n73MBfZ/beautiful-shot-woman-standing-cliff-with-landscape-forested-hills-blue-ocean-181624-40459.jpg",
+        "https://i.ibb.co/p0KVj0d/hiker-beautiful-mountain-landscape-23-2147683210.jpg"
+      ],
+      "tour_type": "Cultural",
+      "trip_title": "Chandranath Hill",
+      "price": "$280",
+      "description": "Explore the cultural and natural beauty of Chandranath Hill. This tour offers breathtaking views, spiritual sites, and a glimpse into local traditions. Ideal for cultural enthusiasts and nature lovers.",
+      "relative_information": "Chandranath Hill is a popular pilgrimage site and offers stunning views of the surrounding landscape. The tour includes visits to temples, cultural sites, and scenic spots."
+    },
+    {
+      "images": [
+        "https://i.ibb.co/F33zs4D/beautiful-river-flows-rocks-88194-1485.jpg",
+        "https://i.ibb.co/k8F38Rq/two-woman-tourists-are-mother-daughter-travel-by-boat-with-kayak-happy-sea-morning-summer-ko-adang-i.jpg",
+        "https://i.ibb.co/MN6JSwn/hiker-beautiful-mountain-landscape-23-2147683210.jpg"
+      ],
+      "tour_type": "Adventure",
+      "trip_title": "Kaptai Lake Rafting",
+      "price": "$450",
+      "description": "Experience the thrill of rafting on Kaptai Lake. This adventure tour offers excitement, beautiful views, and a chance to explore the lake's natural beauty. Perfect for adventure enthusiasts.",
+      "relative_information": "Kaptai Lake is the largest man"
+    }
+  ]
+
+
