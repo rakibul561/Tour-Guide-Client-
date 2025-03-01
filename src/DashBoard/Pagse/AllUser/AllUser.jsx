@@ -2,10 +2,11 @@ import { useQuery } from "@tanstack/react-query";
 import UseAxiosSecore from "../../../Hooks/UseAxiosSecore";
 import { FaTrashAlt, FaUsers } from "react-icons/fa";
 import Swal from "sweetalert2";
+import Loading from "../../../Loading/Loading";
 
 const AllUser = () => {
     const axiosSecure = UseAxiosSecore();
-    const { data: users = [], refetch } = useQuery({
+    const { data: users = [], refetch, isLoading } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
             const res = await axiosSecure.get('/users',);
@@ -13,7 +14,10 @@ const AllUser = () => {
         }
         
     });
-    
+     
+    if(isLoading){
+        return <Loading/>
+    }
 
     const handleMakeAdmin = (role, user) => {
         axiosSecure.patch(`/users/admin/${user._id}`, { role: role })

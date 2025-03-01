@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import UseAxiosSecure from "../../../Hooks/UseAxiosSecore";
 import { useQuery } from "@tanstack/react-query";
-import Cetegory from "../../Tabs/Cetegory";
+
 import OrderTabs from "../../Tabs/OrderTabs";
+import Loading from "../../../Loading/Loading";
 
 const TourType = () => {
     const [tabIndex, setTabIndex] = useState(0);
@@ -15,7 +16,11 @@ const TourType = () => {
             const { data } = await axiosSecure.get('/menu');
             return data;
         }
-    });
+    }); 
+
+    if(isLoading){
+        return <Loading/>
+    }
 
     const Adventure = menu.filter(item => item.tour_type === 'Adventure');
     const Cultural = menu.filter(item => item.tour_type === 'Cultural');
@@ -28,7 +33,7 @@ const TourType = () => {
             <Tabs
                 defaultIndex={tabIndex}
                 onSelect={(index) => setTabIndex(index)}
-                className="max-w-5xl mx-auto"
+                className="max-w-7xl  mx-auto"
             >
                 <TabList className="flex flex-wrap justify-center gap-2 md:gap-4 lg:gap-6 mt-4 mb-8 text-sm sm:text-base md:text-lg">
                     <Tab className="px-4 py-2 border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-100 transition duration-200">

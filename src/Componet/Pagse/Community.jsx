@@ -1,8 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import UseAxiosSecure from "../../Hooks/UseAxiosSecore";
-import { Link } from "react-router-dom";
 import Guide from "./Guide";
-import { Helmet } from "react-helmet-async";
+import Loading from "../../Loading/Loading";
 
 
 const Community = () => {
@@ -18,7 +17,7 @@ const Community = () => {
     });
 
     if (isLoading) {
-        return <div>Loading...</div>;
+        return <Loading/>;
     }
 
     if (error) {

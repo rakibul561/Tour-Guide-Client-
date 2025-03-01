@@ -4,6 +4,7 @@ import { FiGitPullRequest } from "react-icons/fi";
 import { NavLink, Outlet } from "react-router-dom";
 import useFetchSingleUser from "../Hooks/useFindSingleUser";
 import UseAuth from "../Hooks/UseAuth";
+import Loading from "../Loading/Loading";
 
 const Dashboard = () => {
     // const [isAdmin] = useAdmin();
@@ -15,7 +16,7 @@ const Dashboard = () => {
     const { singleUser, loading } = useFetchSingleUser(user?.email)
     console.log(loading);
     if (loading) {
-        return <h1>Loading ...</h1>
+        return <Loading/>
     }
     if (!singleUser) {
         return <h1>User not Found</h1>

@@ -11,7 +11,7 @@ const Guide = ({ tour }) => {
                 <div className="flex flex-col justify-between p-6 space-y-8">
 
                     <Link to={`/tour/${_id}`}>
-                        <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50"> See Details </button>
+                        <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md border dark:bg-violet-600 dark:text-gray-50 btn-outline btn-accent"> See Details </button>
                     </Link>
                 </div>
             </div>

@@ -32,7 +32,7 @@ const Place = ({ item }) => {
     };
 
     return (
-        <div className="p-4 sm:p-6 md:p-8 lg:p-10">
+        <div className="p-2 ">
             <div key={item._id} className="relative rounded-md shadow-md bg-white dark:bg-gray-50 dark:text-gray-900">
                 <img
                     src={item.images}
@@ -44,8 +44,8 @@ const Place = ({ item }) => {
                     <FaHeartbeat />
                 </button>
 
-                <p className="absolute top-4 left-4 px-3 py-1 bg-slate-900 text-white text-sm sm:text-base rounded-md">
-                    ${price}
+                <p className="absolute top-4 left-4 px-3 py-1 bg-[#00B19D] text-white text-sm sm:text-base rounded-md">
+                    {price}
                 </p>
 
                 <h2 className="text-center mt-6 text-xl md:text-2xl font-semibold">{trip_title}</h2>
@@ -53,7 +53,7 @@ const Place = ({ item }) => {
 
                 <div className="flex justify-center mt-6">
                     <Link to={`/details/${_id}`}>
-                        <button className="btn btn-outline bg-slate-300 btn-accent border-0 border-b-4 px-6 py-2">
+                        <button className="btn mb-4 btn-outline  bg-slate-300 btn-accent border-0 border-b-4 px-6 py-2">
                             View Package
                         </button>
                     </Link>

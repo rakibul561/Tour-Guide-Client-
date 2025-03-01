@@ -26,25 +26,26 @@ const Login = () => {
 
     const handleGooglelogin = async () => {
         const result = await googleLoginUser();
+        if (!result || !result.user) {
+            toast.error("Google login failed");
+            return;
+        }
         console.log(result);
         const userInfo = {
-            email: result.user?.email,
-            name: result.user?.displayName,
-            photo:result.user?.photoURL,
-            role : "user"
-        }
+            email: result.user.email,
+            name: result.user.displayName,
+            photo: result.user.photoURL,
+            role: "user"
+        };
         axiosPublic.post('/users', userInfo)
-        .then(res =>{
-           console.log(res.data);
-           navigate(location?.state ? location.state : "/");
-           toast.success("Login succesfully");
-   
-           navigate("/")
-        })
-
-
-      
-    }
+            .then(res => {
+                console.log(res.data);
+                navigate(location?.state ? location.state : "/");
+                toast.success("Login successfully");
+                navigate("/");
+            })
+    };
+    
 
 
     const handleLogin = event => {
