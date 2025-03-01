@@ -135,7 +135,9 @@ const Booking = () => {
                     </div>
                     <div className="form-control w-3/4 mx-auto mt-6">
 
-                        <input className="btn  bg-success btn-block" type="submit" value=" Confrom Bookings" />
+                        <input className="  flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md 0 text-xl  btn btn-outline btn-accent" type="submit" value=" Confrom Bookings" />
+                        
+                    
 
                     </div>
 

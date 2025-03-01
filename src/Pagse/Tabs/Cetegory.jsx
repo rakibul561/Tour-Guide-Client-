@@ -8,22 +8,25 @@ const Cetegory = ({ tabs }) => {
     } = tabs;
     return (
         <div>
-            <div className="card bg-base-100 shadow-xl">
-                <figure className="px-10 pt-10">
-                    <img src={images} alt="Shoes" className="" />
-                </figure>
-                <p className="absolute right-0 top-7 px-4 rounded-md lg:mr-12 mt-4 bg-[#00B19D] text-white">{price}</p>
-                <div className="card-body items-center text-center">
-                    <h2 className="card-title"> {trip_title}!</h2>
-                    <div className="divider">{tour_type}</div>
+          <div className="relative bg-base-100 shadow-xl">
+    <figure className="px-10 pt-10">
+        <img src={images} alt="Shoes" className="lg:h-96 w-full" />
+    </figure>
+    
+    {/* Price badge at top-right */}
+    <p className="absolute top-4 right-11 mt-7 px-4 py-1  rounded-md bg-[#00B19D] text-white shadow-lg">
+        {price}
+    </p>
 
-                    <p>
-  {description.split(" ").slice(0, 30).join(" ")} {description.split(" ").length > 30 && "........."}
-</p>
+    <div className="card-body items-center text-center">
+        <h2 className="card-title">{trip_title}!</h2>
+        <div className="divider">{tour_type}</div>
+        <p>
+            {description.split(" ").slice(0, 30).join(" ")} {description.split(" ").length > 30 && "........."}
+        </p>
+    </div>
+</div>
 
-
-                </div>
-            </div>
         </div>
     );
 };

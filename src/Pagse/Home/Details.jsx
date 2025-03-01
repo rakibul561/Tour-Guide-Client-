@@ -4,6 +4,8 @@ import { useQuery } from "@tanstack/react-query";
 import Ask from "./Home/Datils/Ask";
 import Community from "../../Componet/Pagse/Community";
 import { Helmet } from "react-helmet-async";
+import Loading from "../../Loading/Loading";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 
 const Details = () => {
@@ -18,7 +20,7 @@ const Details = () => {
         }
     });
 
-    if (isLoading) return <progress className="progress w-56"></progress>;
+    if (isLoading) return <Loading/>
     if (isError) return <div>Failed to load data</div>;
 
     const { images = [], price, relative_information, description, trip_title } = menu;
@@ -77,7 +79,11 @@ const Details = () => {
                                     </div>
                                     <Link to={`/booking/${id}`}>
 
-                                        <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50">Book Now</button>
+                                        <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md 0 text-xl  btn btn-outline btn-accent text-white ">Book Now
+
+                                        <FaArrowRightLong />
+                                        </button>
+                                       
 
                                     </Link>
                                 </div>

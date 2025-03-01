@@ -7,7 +7,7 @@ import TourType from "./TourType";
 
 const Home = () => {
     return (
-        <div>
+        <div className="">
             <Helmet>
                 <title>Home || Pagse</title>
             </Helmet>

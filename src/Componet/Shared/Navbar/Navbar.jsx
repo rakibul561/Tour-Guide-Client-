@@ -2,35 +2,13 @@ import { useContext, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Provaider/AuthProvaider";
 import Swal from "sweetalert2";
-import image from "../../../assets/Login/logo.png";
-
 import "./nav.css";
 
 const Navbar = () => {
   const [userOpen, setUserOpen] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false); // Dropdown toggle state
+  const [menuOpen, setMenuOpen] = useState(false);
   const { user, logOut } = useContext(AuthContext);
   const navigate = useNavigate();
-
-  const navLink = (
-    <>
-      <li className="my-2 add text-xl lg:my-0">
-        <NavLink to="/">Home</NavLink>
-      </li>
-      <li className="my-2 add text-xl lg:my-0">
-        <NavLink to="/community">Community</NavLink>
-      </li>
-      <li className="my-2 add text-xl lg:my-0">
-        <NavLink to="/blogs">Blogs</NavLink>
-      </li>
-      <li className="my-2 add text-xl lg:my-0">
-        <NavLink to="/about">About Us</NavLink>
-      </li>
-      <li className="my-2 add text-xl lg:my-0">
-        <NavLink to="/contact">Contact Us</NavLink>
-      </li>
-    </>
-  );
 
   const handleLogOut = async () => {
     try {
@@ -53,17 +31,17 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-base-300 shadow-md rounded-lg">
-      <div className="navbar-start">
-        <div className="dropdown">
+    <div className="fixed top-0 left-0 w-full bg-base-300 shadow-md py-4 z-50">
+      <div className="container mx-auto flex items-center justify-between px-4 md:px-8 lg:px-12">
+        {/* Navbar Start */}
+        <div className="flex items-center">
           <button
-            tabIndex={0}
             className="btn btn-ghost lg:hidden"
-            onClick={() => setMenuOpen(!menuOpen)} // Toggle menu
+            onClick={() => setMenuOpen(!menuOpen)}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -76,27 +54,50 @@ const Navbar = () => {
               />
             </svg>
           </button>
-          <ul
-            className={`menu add dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 lg:hidden ${
-              menuOpen ? "block" : "hidden"
-            }`}
-            style={{ zIndex: 40 }} // Added z-index for dropdown menu
-          >
-            {navLink}
-          </ul>
+          <Link to="/" className="flex items-center gap-2">
+            <span className="font-bold text-lg md:text-xl text-black">
+              Beautiful <span className="text-green-500">Bangladesh</span>
+            </span>
+          </Link>
         </div>
-        <Link to="/" className="flex gap-2 items-center">
-          <img className="h-12 md:h-16" src={image} alt="" />
-          <span className="font-bold text-lg md:text-xl text-black">
-            Beautiful <span className="text-green-500">Bangladesh</span>
-          </span>
-        </Link>
-      </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal gap-2 px-1">{navLink}</ul>
-      </div>
-      <div className="navbar-end">
-        <div className="relative flex items-center w-full md:w-auto pl-24">
+
+        {/* Navbar Center */}
+        <div
+          className={`absolute lg:static top-16 left-0 w-full lg:w-auto bg-base-300 lg:bg-transparent transition-transform duration-300 lg:flex lg:items-center lg:gap-6 font-bold text-center ${
+            menuOpen ? "block" : "hidden"
+          }`}
+        >
+          <NavLink to="/" className="hover:text-[#00B19D] block py-2 lg:inline">
+            Home
+          </NavLink>
+          <NavLink
+            to="/community"
+            className="hover:text-[#00B19D] block py-2 lg:inline"
+          >
+            Community
+          </NavLink>
+          <NavLink
+            to="/about"
+            className="hover:text-[#00B19D] block py-2 lg:inline"
+          >
+            About Us
+          </NavLink>
+          <NavLink
+            to="/blogs"
+            className="hover:text-[#00B19D] block py-2 lg:inline"
+          >
+            Blogs
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className="hover:text-[#00B19D] block py-2 lg:inline"
+          >
+            Contact Us
+          </NavLink>
+        </div>
+
+        {/* Navbar End */}
+        <div className="relative flex items-center">
           {user ? (
             <button
               onClick={() => setUserOpen(!userOpen)}
@@ -105,7 +106,7 @@ const Navbar = () => {
               <img
                 src={user?.photoURL}
                 alt="user avatar"
-                className="w-full h-full object-cover rounded-full"
+                className="w-full h-full object-cover"
               />
             </button>
           ) : (
@@ -117,10 +118,11 @@ const Navbar = () => {
             </Link>
           )}
 
+          {/* User Dropdown */}
           <div
-            className={`absolute right-0 top-14 lg:top-16 z-50 w-40 lg:w-48 p-4 shadow-lg bg-base-200 rounded-lg ${
+            className={`absolute right-0 top-14 lg:top-16 w-40 lg:w-48 p-4 shadow-lg bg-base-200 rounded-lg ${
               userOpen ? "block" : "hidden"
-            }`} // Added z-index for user dropdown
+            }`}
           >
             <p className="text-sm text-black font-semibold">
               {user?.displayName}

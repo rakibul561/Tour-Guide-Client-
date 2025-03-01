@@ -36,19 +36,19 @@ const TourType = () => {
                 className="max-w-7xl  mx-auto"
             >
                 <TabList className="flex flex-wrap justify-center gap-2 md:gap-4 lg:gap-6 mt-4 mb-8 text-sm sm:text-base md:text-lg">
-                    <Tab className="px-4 py-2 border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-100 transition duration-200">
+                    <Tab className="px-4 py-2 border  text-white bg-[#00B19D] rounded-lg cursor-pointer focus:outline-none  duration-200">
                         Adventure
                     </Tab>
-                    <Tab className="px-4 py-2 border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-100 transition duration-200">
+                    <Tab className="px-4 py-2 border  text-white bg-[#00B19D] border-gray-300 rounded-lg cursor-pointer focus:outline-none transition duration-200">
                         Cultural
                     </Tab>
-                    <Tab className="px-4 py-2 border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-100 transition duration-200">
+                    <Tab className="px-4 py-2 border  text-white bg-[#00B19D] border-gray-300 rounded-lg cursor-pointer focus:outline-none  transition duration-200">
                         Nature
                     </Tab>
-                    <Tab className="px-4 py-2 border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-100 transition duration-200">
+                    <Tab className="px-4 py-2 border  text-white bg-[#00B19D] border-gray-300 rounded-lg cursor-pointer focus:outline-none  transition duration-200">
                         Wildlife
                     </Tab>
-                    <Tab className="px-4 py-2 border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-100 transition duration-200">
+                    <Tab className="px-4 py-2 border  text-white bg-[#00B19D] border-gray-300 rounded-lg cursor-pointer focus:outline-none transition duration-200">
                         Historical
                     </Tab>
                 </TabList>
