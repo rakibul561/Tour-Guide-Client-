@@ -1,68 +1,125 @@
-
+/* eslint-disable react/jsx-key */
 
 const Blogs = () => {
     return (
-        <div>
-            <section className="p-6 my-6 mt-14 dark:bg-gray-100 dark:text-gray-800">
-                <div className="container grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 xl:grid-cols-4">
-                    <div className="flex p-4 space-x-4 rounded-lg md:space-x-6 dark:bg-gray-50 dark:text-gray-800">
-                        <div className="flex justify-center p-2 align-middle rounded-lg sm:p-4 dark:bg-violet-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="h-9 w-9 dark:text-gray-100">
-                                <polygon points="160 96.039 160 128.039 464 128.039 464 191.384 428.5 304.039 149.932 304.039 109.932 16 16 16 16 48 82.068 48 122.068 336.039 451.968 336.039 496 196.306 496 96.039 160 96.039"></polygon>
-                                <path d="M176.984,368.344a64.073,64.073,0,0,0-64,64h0a64,64,0,0,0,128,0h0A64.072,64.072,0,0,0,176.984,368.344Zm0,96a32,32,0,1,1,32-32A32.038,32.038,0,0,1,176.984,464.344Z"></path>
-                                <path d="M400.984,368.344a64.073,64.073,0,0,0-64,64h0a64,64,0,0,0,128,0h0A64.072,64.072,0,0,0,400.984,368.344Zm0,96a32,32,0,1,1,32-32A32.038,32.038,0,0,1,400.984,464.344Z"></path>
-                            </svg>
+        <div className="grid grid-cols-1 max-w-7xl mx-auto lg:grid-cols-4 gap-2">
+            {
+                blogs.map((blog) => (
+                    <section key={blog.id} className=" mt-10  dark:bg-gray-100 dark:text-gray-800">
+                        <div className="    ">
+                           
+                            <div className="">
+                                <article className="flex flex-col dark:bg-gray-50">
+                                    <a rel="noopener noreferrer"  aria-label={blog.title}>
+                                        <img alt={blog.title} className="object-cover w-full h-52 dark:bg-gray-500" src={blog.image} />
+                                    </a>
+                                    <div className="flex flex-col flex-1 p-6">
+                                        <a rel="noopener noreferrer"  aria-label={blog.title}></a>
+                                        <a rel="noopener noreferrer"  className="text-xs tracking-wider uppercase hover:underline dark:text-violet-600">Convenire</a>
+                                        <h3 className="flex-1 py-2 text-lg font-semibold leading-snug">{blog.title}</h3>
+                                   
+                                        <div className="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-600">
+                                            <span>{blog.date}</span>
+                                            <span>2.1K views</span>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
-                        <div className="flex flex-col justify-center align-middle">
-                            <p className="text-3xl font-semibold leading-none">200</p>
-                            <p className="capitalize">Orders</p>
-                        </div>
-                    </div>
-                    <div className="flex p-4 space-x-4 rounded-lg md:space-x-6 dark:bg-gray-50 dark:text-gray-800">
-                        <div className="flex justify-center p-2 align-middle rounded-lg sm:p-4 dark:bg-violet-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="h-9 w-9 dark:text-gray-100">
-                                <path d="M256,16C123.452,16,16,123.452,16,256S123.452,496,256,496,496,388.548,496,256,388.548,16,256,16ZM403.078,403.078a207.253,207.253,0,1,1,44.589-66.125A207.332,207.332,0,0,1,403.078,403.078Z"></path>
-                                <path d="M256,384A104,104,0,0,0,360,280H152A104,104,0,0,0,256,384Z"></path>
-                                <polygon points="205.757 228.292 226.243 203.708 168 155.173 109.757 203.708 130.243 228.292 168 196.827 205.757 228.292"></polygon>
-                                <polygon points="285.757 203.708 306.243 228.292 344 196.827 381.757 228.292 402.243 203.708 344 155.173 285.757 203.708"></polygon>
-                            </svg>
-                        </div>
-                        <div className="flex flex-col justify-center align-middle">
-                            <p className="text-3xl font-semibold leading-none">7500</p>
-                            <p className="capitalize">New customers</p>
-                        </div>
-                    </div>
-                    <div className="flex p-4 space-x-4 rounded-lg md:space-x-6 dark:bg-gray-50 dark:text-gray-800">
-                        <div className="flex justify-center p-2 align-middle rounded-lg sm:p-4 dark:bg-violet-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="h-9 w-9 dark:text-gray-100">
-                                <path d="M425.706,142.294A240,240,0,0,0,16,312v88H160V368H48V312c0-114.691,93.309-208,208-208s208,93.309,208,208v56H352v32H496V312A238.432,238.432,0,0,0,425.706,142.294Z"></path>
-                                <rect width="32" height="32" x="80" y="264"></rect>
-                                <rect width="32" height="32" x="240" y="128"></rect>
-                                <rect width="32" height="32" x="136" y="168"></rect>
-                                <rect width="32" height="32" x="400" y="264"></rect>
-                                <path d="M297.222,335.1l69.2-144.173-28.85-13.848L268.389,321.214A64.141,64.141,0,1,0,297.222,335.1ZM256,416a32,32,0,1,1,32-32A32.036,32.036,0,0,1,256,416Z"></path>
-                            </svg>
-                        </div>
-                        <div className="flex flex-col justify-center align-middle">
-                            <p className="text-3xl font-semibold leading-none">172%</p>
-                            <p className="capitalize">Growth</p>
-                        </div>
-                    </div>
-                    <div className="flex p-4 space-x-4 rounded-lg md:space-x-6 dark:bg-gray-50 dark:text-gray-800">
-                        <div className="flex justify-center p-2 align-middle rounded-lg sm:p-4 dark:bg-violet-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="h-9 w-9 dark:text-gray-100">
-                                <path d="M454.423,278.957,328,243.839v-8.185a116,116,0,1,0-104,0V312H199.582l-18.494-22.6a90.414,90.414,0,0,0-126.43-13.367,20.862,20.862,0,0,0-8.026,33.47L215.084,496H472V302.08A24.067,24.067,0,0,0,454.423,278.957ZM192,132a84,84,0,1,1,136,65.9V132a52,52,0,0,0-104,0v65.9A83.866,83.866,0,0,1,192,132ZM440,464H229.3L79.141,297.75a58.438,58.438,0,0,1,77.181,11.91l28.1,34.34H256V132a20,20,0,0,1,40,0V268.161l144,40Z"></path>
-                            </svg>
-                        </div>
-                        <div className="flex flex-col justify-center align-middle">
-                            <p className="text-3xl font-semibold leading-none">17%</p>
-                            <p className="capitalize">Bounce rate</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                    </section>
+                ))
+            }
         </div>
     );
 };
 
 export default Blogs;
+
+const blogs = [
+    {
+      "id": 1,
+      "title": "The Ultimate Travel Guide to Cox’s Bazar",
+      "content": "Cox’s Bazar is home to the world's longest sea beach. Find out where to stay, what to eat, and top attractions to visit.",
+      "author": "Travel Expert",
+      "date": "2025-03-02",
+      "image": "https://i.ibb.co.com/LhsSMhTZ/coxs-bazar-20240928103318.jpg"
+
+
+    },
+    {
+      "id": 2,
+      "title": "Budget Travel Tips for Exploring Sundarbans",
+      "content": "Sundarbans is the world's largest mangrove forest and home to the Royal Bengal Tiger. Here’s how you can explore it on a budget.",
+      "author": "Adventure Lover",
+      "date": "2025-03-02",
+      "image": "https://i.ibb.co.com/V0p7zY1V/sonddar.webp"
+    },
+    {
+      "id": 3,
+      "title": "Top 10 Tips for Traveling Abroad",
+      "content": "Learn how to manage your budget, get visas easily, and stay safe while traveling internationally.",
+      "author": "Globe Trotter",
+      "date": "2025-03-02",
+      "image": "https://i.ibb.co.com/nNBm7nTF/istockphoto-1971796553-2048x2048.jpg"
+    },
+    {
+      "id": 4,
+      "title": "A Complete Guide to Trekking in Bandarban",
+      "content": "Bandarban is a paradise for trekkers. Discover the best hiking trails, safety tips, and must-visit places.",
+      "author": "Mountain Explorer",
+      "date": "2025-03-02",
+      "image": "https://i.ibb.co.com/MyDsCvVL/woman-taking-photo-morning-mist-phu-lang-ka-phayao-thailand-335224-950.jpg"
+    },
+
+
+    {
+      "id": 5,
+      "title": "How to Plan a Solo Trip in 2025",
+      "content": "Solo traveling can be life-changing. Here’s how you can plan your first solo adventure with ease.",
+      "author": "Solo Voyager",
+      "date": "2025-03-02",
+      "image": "    https://i.ibb.co.com/m5SLG4yf/traveler-girl-searching-right-direction-map-while-traveling-hiking-mountain-travel-concept-1150-1915.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Best Hidden Travel Destinations in Asia",
+      "content": "Avoid the crowds and explore these hidden travel gems in Asia for a unique experience.",
+      "author": "Wanderlust Seeker",
+      "date": "2025-03-02",
+      "image": "https://i.ibb.co.com/9kfJfJkw/people-portrait-with-plane-flying-sky-23-2149520420.jpg"
+    },
+    {
+      "id": 7,
+      "title": "How to Save Money While Traveling",
+      "content": "Want to travel more without breaking the bank? Check out these expert money-saving travel tips.",
+      "author": "Budget Traveler",
+      "date": "2025-03-02",
+      "image": "https://i.ibb.co.com/0pSHr9p2/young-beautiful-traveler-girl-summer-hat-with-backpack-holding-air-tickets-smiling-cheerfully-happy.jpg"
+    },
+    {
+      "id": 8,
+      "title": "10 Must-Visit Islands for Your Next Vacation",
+      "content": "From the Maldives to Bali, here are the best island destinations to relax and unwind.",
+      "author": "Beach Lover",
+      "date": "2025-03-02",
+      "image": "https://i.ibb.co.com/jZTmvnY2/next-vacation.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Packing Essentials for Your Next Trip",
+      "content": "Not sure what to pack? Here’s a complete checklist to ensure you don’t forget anything important.",
+      "author": "Travel Organizer",
+      "date": "2025-03-02",
+      "image": " https://i.ibb.co.com/TDJS7K1y/next-travel-trip.jpg"
+    },
+   
+
+    {
+      "id": 10,
+      "title": "How to Experience Local Culture While Traveling",
+      "content": "Engage with locals, try traditional foods, and learn about different cultures with these simple tips.",
+      "author": "Cultural Explorer",
+      "date": "2025-03-02",
+      "image": "https://i.ibb.co.com/hxn0Xtv3/female-tourists-hand-have-happy-travel-map-1150-7269.jpg"
+    }
+]

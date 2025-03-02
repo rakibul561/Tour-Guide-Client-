@@ -4,7 +4,7 @@ import Overview from "../Overview";
 import Carosel from "./Caresol";
 import TourType from "./TourType";
 import Community from "../../../Componet/Pagse/Community";
-
+import Blogs from "../../../Componet/Pagse/Blogs";
 
 const Home = () => {
     return (
@@ -24,6 +24,15 @@ const Home = () => {
                 </p>
               <Community/>
               </div>
+              <div className="text-center mt-20 mb-20"> 
+                <h2 className="text-5xl font-bold text-[#00B19D]"> Our All Blogs</h2>
+                <p className="text-xl mb-20 mt-4">
+  Explore all our blog posts here. Feel free to ask any questions and meet our dedicated team members.
+</p>
+
+              <Blogs/>
+              </div>
+             
 
                 
             </div>
