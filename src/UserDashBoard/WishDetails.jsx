@@ -18,7 +18,7 @@ const WishDetails = () => {
                     <Helmet>
                         <title>WishList || Details</title>
                     </Helmet>
-                    <div>
+                    <div className=" mb-20">
                         <h2 className="text-3xl font-bold text-blue-600 mb-8 lg:ml-44">Details Page</h2>
                         <div className="md:w-3/4 mx-auto rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
                             {Array.isArray(images) && images.length > 0 && (
@@ -33,9 +33,9 @@ const WishDetails = () => {
                                     <p className="dark:text-gray-800">{description}</p>
                                     <p>{relative_information}</p>
                                 </div>
-                                <Link to='/'>
-                                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50">
-                                        Back To Home Page
+                                <Link to='/dashboard/love'>
+                                    <button type="button" className="flex items-center justify-center w-full bg-accent p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50">
+                                        Back To  Page
                                     </button>
                                 </Link>
                             </div>

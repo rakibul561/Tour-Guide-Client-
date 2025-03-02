@@ -1,12 +1,16 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
+
 
 const Cetegory = ({ tabs }) => {
     console.log(tabs);
     const { images, trip_title,
-        description,tour_type,price,
+        description,tour_type,price,_id ,
     } = tabs;
     return (
+        <Link to={`/details/${_id}`}>
+        
         <div>
           <div className="relative bg-base-100 shadow-xl">
     <figure className="px-10 pt-10">
@@ -28,6 +32,7 @@ const Cetegory = ({ tabs }) => {
 </div>
 
         </div>
+        </Link>
     );
 };
 

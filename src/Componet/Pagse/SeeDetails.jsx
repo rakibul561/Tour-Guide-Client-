@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 import UseAxiosSecure from "../../Hooks/UseAxiosSecore";
 import { Helmet } from "react-helmet-async";
+import Loading from "../../Loading/Loading";
 
 
 const SeeDetails = () => {
@@ -19,7 +20,7 @@ const SeeDetails = () => {
     });
 
 
-    if (isLoading) return <progress className="progress w-56"></progress>;
+    if (isLoading) return <Loading/>
     if (isError) return <div>Failed to load data</div>;
 
     // <h2 className="text-xl ">UserId: <span className=" font-semibold">{users._id}</span> </h2>

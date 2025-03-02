@@ -29,8 +29,9 @@ const Community = () => {
 
     return (
         <div className="mb-8">
+           
        
-            <div className="grid lg:grid-cols-4 w-3/4 mx-auto mt-10 gap-4">
+            <div className="grid lg:grid-cols-4 max-w-7xl mx-auto  mt-10 gap-4">
                 {
                     tourGuide.map(tour=> <Guide
                     key={tour._id}
