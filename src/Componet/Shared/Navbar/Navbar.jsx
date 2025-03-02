@@ -35,7 +35,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-base-300 shadow-md py-2 rounded-lg">
+    <div className="navbar bg-[#00B19D] text-white shadow-md py-2 rounded-lg">
       <div className="navbar-start">
         <div className="dropdown">
           <button
@@ -69,19 +69,20 @@ const Navbar = () => {
         </div>
         <Link to="/" className="flex gap-2 items-center">
           
-          <span className="font-bold text-lg md:text-xl text-black">
-            Beautiful <span className="text-green-500">Bangladesh</span>
-          </span>
+          <h2 className="font-bold text-lg md:text-2xl text-black">
+             <span
+               className="text-2xl font-bold bg-gradient-to-r from-white via-yellow-500 to-[#000000] text-transparent bg-clip-text animate-gradient">EasyTrips</span>
+          </h2>
         </Link>
       </div>
       <div className="navbar-center gap-6 hidden font-bold  lg:flex">
  
 
-        <NavLink to="/" className= "hover:text-[#00B19D]">Home</NavLink>
-        <NavLink to="/community"   className= "hover:text-[#00B19D]">Community</NavLink>
-        <NavLink to="/about"  className= "hover:text-[#00B19D]">About Us</NavLink>
-        <NavLink to="/blogs"  className= "hover:text-[#00B19D]">Blogs</NavLink>
-        <NavLink to="/contact"  className= "hover:text-[#00B19D]">Contact Us</NavLink>
+        <NavLink to="/" className= "hover:text-black">Home</NavLink>
+        <NavLink to="/community"   className= "hover:text-black">Community</NavLink>
+        <NavLink to="/about"  className= "hover:text-black">About Us</NavLink>
+        <NavLink to="/blogs"  className= "hover:text-black">Blogs</NavLink>
+        <NavLink to="/contact"  className= "hover:text-black">Contact Us</NavLink>
       </div>
       <div className="navbar-end">
         <div className="relative flex items-center w-full md:w-auto pl-24 lg:mr-16">
