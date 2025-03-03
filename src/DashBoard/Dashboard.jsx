@@ -1,6 +1,5 @@
 import { FaAd, FaCalendar, FaHome, FaList, FaUser } from "react-icons/fa";
 import { FaPersonRifle } from "react-icons/fa6";
-import { FiGitPullRequest } from "react-icons/fi";
 import { NavLink, Outlet } from "react-router-dom";
 import useFetchSingleUser from "../Hooks/useFindSingleUser";
 import UseAuth from "../Hooks/UseAuth";
@@ -102,12 +101,7 @@ const Dashboard = () => {
                                         My Wishlist
                                     </NavLink>
                                 </li>
-                                <li>
-                                    <NavLink to='/dashboard/request'>
-                                        <FiGitPullRequest />
-                                        Request to Admin
-                                    </NavLink>
-                                </li>
+                                
 
                             </>
                         }

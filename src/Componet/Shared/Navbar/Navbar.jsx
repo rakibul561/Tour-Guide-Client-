@@ -3,16 +3,13 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Provaider/AuthProvaider";
 import Swal from "sweetalert2";
 
-
 import "./nav.css";
 
 const Navbar = () => {
   const [userOpen, setUserOpen] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false); // Dropdown toggle state
+  const [menuOpen, setMenuOpen] = useState(false); // Mobile menu toggle state
   const { user, logOut } = useContext(AuthContext);
   const navigate = useNavigate();
-
-
 
   const handleLogOut = async () => {
     try {
@@ -35,17 +32,17 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-[#00B19D] text-white shadow-md py-2 rounded-lg">
-      <div className="navbar-start">
-        <div className="dropdown">
+    <nav className="bg-[#00B19D] text-white shadow-md py-3">
+      <div className="container mx-auto flex justify-between items-center px-4 md:px-6 lg:px-10">
+        {/* Left Side - Logo */}
+        <div className="flex items-center">
           <button
-            tabIndex={0}
-            className="btn btn-ghost lg:hidden"
-            onClick={() => setMenuOpen(!menuOpen)} // Toggle menu
+            className="lg:hidden text-white focus:outline-none"
+            onClick={() => setMenuOpen(!menuOpen)}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -58,38 +55,44 @@ const Navbar = () => {
               />
             </svg>
           </button>
-          <ul
-            className={`menu add dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 lg:hidden ${
-              menuOpen ? "block" : "hidden"
-            }`}
-            style={{ zIndex: 40 }} // Added z-index for dropdown menu
-          >
-            {/* {navLink} */}
-          </ul>
+          <Link to="/" className="flex items-center ml-2">
+            <h2 className="font-bold text-lg md:text-2xl text-black">
+              <span className="text-2xl font-bold bg-gradient-to-r from-white via-yellow-500 to-[#000000] text-transparent bg-clip-text animate-gradient">
+                EasyTrips
+              </span>
+            </h2>
+          </Link>
         </div>
-        <Link to="/" className="flex gap-2 items-center">
-          
-          <h2 className="font-bold text-lg md:text-2xl text-black">
-             <span
-               className="text-2xl font-bold bg-gradient-to-r from-white via-yellow-500 to-[#000000] text-transparent bg-clip-text animate-gradient">EasyTrips</span>
-          </h2>
-        </Link>
-      </div>
-      <div className="navbar-center gap-6 hidden font-bold  lg:flex">
- 
 
-        <NavLink to="/" className= "hover:text-black">Home</NavLink>
-        <NavLink to="/community"   className= "hover:text-black">Community</NavLink>
-        <NavLink to="/about"  className= "hover:text-black">About Us</NavLink>
-        <NavLink to="/blogs"  className= "hover:text-black">Blogs</NavLink>
-        <NavLink to="/contact"  className= "hover:text-black">Contact Us</NavLink>
-      </div>
-      <div className="navbar-end">
-        <div className="relative flex items-center w-full md:w-auto pl-24 lg:mr-16">
+        {/* Center Menu - Hidden in Mobile, Visible in Large Screens */}
+        <div
+          className={`absolute lg:static left-0 top-14 w-full lg:w-auto bg-[#00B19D] lg:bg-transparent shadow-lg lg:shadow-none rounded-lg lg:flex items-center space-y-4 lg:space-y-0 lg:space-x-6 p-5 lg:p-0 transition-all duration-300 ${
+            menuOpen ? "block" : "hidden"
+          }`}
+        >
+          <NavLink to="/" className="hover:text-black block lg:inline">
+            Home
+          </NavLink>
+          <NavLink to="package" className="hover:text-black block lg:inline">
+            Package
+          </NavLink>
+          <NavLink to="/community" className="hover:text-black block lg:inline">
+            Community
+          </NavLink>
+          <NavLink to="/blogs" className="hover:text-black block lg:inline">
+            Blogs
+          </NavLink>
+          <NavLink to="/contact" className="hover:text-black block lg:inline">
+            Contact Us
+          </NavLink>
+        </div>
+
+        {/* Right Side - User/Login Button */}
+        <div className="relative flex items-center">
           {user ? (
             <button
               onClick={() => setUserOpen(!userOpen)}
-              className="border-2 border-[#FF497C]  rounded-full w-[40px] lg:w-[60px] overflow-hidden"
+              className="border-2 border-[#00B19D] rounded-full w-[40px] overflow-hidden"
             >
               <img
                 src={user?.photoURL}
@@ -99,22 +102,21 @@ const Navbar = () => {
             </button>
           ) : (
             <Link
-              to={"/login"}
+              to="/login"
               className="bg-[#FF497C] hover:bg-[#ab3154] duration-200 text-white font-bold px-4 xl:px-6 py-1 rounded"
             >
               Login
             </Link>
           )}
 
+          {/* User Dropdown */}
           <div
-            className={`absolute right-0 top-14 lg:top-16 z-50 w-40 lg:w-48 p-4 shadow-lg bg-base-200 rounded-lg ${
+            className={`absolute right-0 top-14 z-50 w-40 lg:w-48 p-4 shadow-lg bg-white text-black rounded-lg ${
               userOpen ? "block" : "hidden"
-            }`} // Added z-index for user dropdown
+            }`}
           >
-            <p className="text-sm text-black font-semibold">
-              {user?.displayName}
-            </p>
-            <p className="text-sm text-black font-semibold">{user?.email}</p>
+            <p className="text-sm font-semibold">{user?.displayName}</p>
+            <p className="text-sm">{user?.email}</p>
             <Link to="/dashboard">
               <button className="w-full my-2 btn btn-sm btn-outline btn-success font-bold">
                 Dashboard
@@ -129,7 +131,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

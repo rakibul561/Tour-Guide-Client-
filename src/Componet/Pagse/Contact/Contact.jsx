@@ -1,5 +1,4 @@
 import { MdOutlineAttachEmail } from "react-icons/md";
-import { MdEmail } from "react-icons/md";
 import { FaPhone } from 'react-icons/fa';
 import { ImLocation2 } from 'react-icons/im';
 
@@ -10,13 +9,16 @@ const Contact = () => {
                 <div
                     className="w-full bg-center bg-cover h-[400px] md:h-[500px]"
                     style={{
-                        backgroundImage: `url(https://i.ibb.co.com/yRsG2m7/bg.jpg)`,
+                        backgroundImage: `url(https://i.ibb.co.com/b5kX72y8/contact-register-feedback-support-help-concept-53876-124243.jpg)`,
                     }}
                 >
                     <div className="flex items-center justify-center w-full h-full bg-gray-900/40">
                         <div className="text-center">
-                            <h1 className="text-3xl font-semibold text-white lg:text-4xl">
-                                Build your new <span className="text-blue-400">SaaS</span> Project
+                            <h1 className="text-3xl font-semibold text-white lg:text-5xl">
+                                Build your new <span className="text-blue-400"> 
+                                <span
+               className=" font-bold bg-gradient-to-r from-red-600 via-yellow-500 to-[#000000] text-transparent bg-clip-text animate-gradient">EasyTrips</span>
+                                    </span> Project
                             </h1>
                           
                         </div>
@@ -58,10 +60,10 @@ const Contact = () => {
                     <div className="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg shadow-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32">
                         <div className="flex flex-col justify-between">
                             <div className="space-y-2">
-                                <h2 className="text-4xl font-bold leading-tight lg:text-5xl text-gray-900">Let's talk!</h2>
+                                <h2 className="text-4xl font-bold leading-tight lg:text-5xl text-gray-900">Lets talk!</h2>
                                 <p>Vivamus in nisl metus? Phasellus.</p>
                             </div>
-                            <img src="assets/svg/doodle.svg" alt="Decorative Doodle" className="p-6 h-52 md:h-64" />
+                            <img src="https://i.ibb.co.com/Zp6z5tKr/contact-us-concept-illustration-114360-2299.jpg" alt="Decorative Doodle" className="p-2 lg:mr-44 h-52 md:h-64" />
                         </div>
                         <form className="space-y-6">
                             <div>

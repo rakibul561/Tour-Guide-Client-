@@ -78,15 +78,22 @@ const AddItem = () => {
                         />
                     </div>
                     <div className="form-control w-full">
-                        <label className="label">
-                            <span className="label-text">Tour Type</span>
-                        </label>
-                        <input
-                            type="text"
-                            {...register('tour_type', { required: true })}
-                            className="input input-bordered w-full"
-                        />
-                    </div>
+    <label className="label">
+        <span className="label-text">Tour Type</span>
+    </label>
+    <select
+        {...register('tour_type', { required: true })}
+        className="select select-bordered w-full"
+    >
+        <option value="">Select a Tour Type</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Cultural">Cultural</option>
+        <option value="Wildlife">Wildlife</option>
+        <option value="Nature">Nature</option>
+        <option value="Historical">Historical</option>
+    </select>
+</div>
+
                 </div>
                 <div className="flex gap-4">
                     <div className="form-control w-full">
