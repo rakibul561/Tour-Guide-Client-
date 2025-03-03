@@ -4,12 +4,12 @@ Welcome to our Tourist Guide Website! Explore amazing destinations, plan your tr
 
 ## Admin Credentials
 
-- **Emily Thompson:** admin
+- **Emily Thompson:** rakibul@gmail.com
 - **Password:** [123456]
 
 ## Live Site
 
-Visit our website live at [www.touristguide.com](https://tour-guide-client.surge.sh/)
+Visit our website live at [www.touristguide.com](https://tour-guide-client-7cfba.web.app/)
 
 
 Project Overview:
