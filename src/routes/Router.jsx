@@ -76,12 +76,12 @@ export const router = createBrowserRouter([
             {
                 path: '/booking/:id',
                 element: <Booking></Booking>,
-                loader: ({ params }) => fetch(`https://tour-guide-server-six.vercel.app/menu/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/menu/${params.id}`)
             },
             {
                 path: '/wishlist/:id',
                 element: <WishDetails></WishDetails>,
-                loader: ({ params }) => fetch(`https://tour-guide-server-six.vercel.app/heart/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/heart/${params.id}`)
             }
         ]
     },
@@ -124,7 +124,7 @@ export const router = createBrowserRouter([
             {
                 path: 'wishlist/:id',
                 element: <WishDetails></WishDetails>,
-                loader: ({ params }) => fetch(`https://tour-guide-server-six.vercel.app/heart/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/heart/${params.id}`)
             },
             {
                 path: 'assigned',

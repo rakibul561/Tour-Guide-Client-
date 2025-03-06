@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Guide = ({ tour }) => {
     const { _id, photo } = tour;
-    console.log(tour);
+    // console.log(tour);
     return (
         <div>
            

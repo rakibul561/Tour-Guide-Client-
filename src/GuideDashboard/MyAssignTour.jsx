@@ -14,7 +14,7 @@ const MyAssignTour = () => {
 
     const [books, setBooks] = useState([]);
     const [assingedData, setAssignedData] = useState([])
-    const url = `https://tour-guide-server-six.vercel.app/booking`
+    const url = `http://localhost:5000//booking`
 
     useEffect(() => {
         fetch(url)
