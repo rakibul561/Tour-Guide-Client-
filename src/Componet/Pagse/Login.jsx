@@ -152,7 +152,7 @@ const Login = () => {
                                 id='LoggingEmailAddress'
                                 autoComplete='email'
                                 name='email'
-                                className='block w-full px-4 py-2 0 bg-white border rounded-lg    focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300'
+                                className='block w-full px-4 py-2 0 bg-white border rounded-lg  text-black  focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300'
                                 type='email'
                             />
                         </div>
@@ -171,7 +171,7 @@ const Login = () => {
                                 id='loggingPassword'
                                 autoComplete='current-password'
                                 name='password'
-                                className='block w-full px-4 py-2  bg-white border rounded-lg    focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300'
+                                className='block w-full px-4 py-2  text-black bg-white border rounded-lg    focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300'
                                 type='password'
                             />
                         </div>

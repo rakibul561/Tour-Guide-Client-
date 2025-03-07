@@ -46,6 +46,7 @@ const MyBooking = () => {
                     <thead>
                         <tr>
 
+                            <th>Email</th>
                             <th>Package Name</th>
 
                             <th> Tour Date</th>
