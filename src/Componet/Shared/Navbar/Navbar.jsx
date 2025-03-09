@@ -32,7 +32,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#00B19D] text-white shadow-md py-3">
+    <nav className="bg-[#00B19D] text-white shadow-md py-3 relative z-50">
       <div className="container mx-auto flex justify-between items-center px-4 md:px-6 lg:px-10">
         {/* Left Side - Logo */}
         <div className="flex items-center">
@@ -64,27 +64,40 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Center Menu - Hidden in Mobile, Visible in Large Screens */}
-        <div
-          className={`absolute lg:static left-0 top-14 w-full lg:w-auto bg-[#00B19D] lg:bg-transparent shadow-lg lg:shadow-none rounded-lg lg:flex items-center space-y-4 lg:space-y-0 lg:space-x-6 p-5 lg:p-0 transition-all duration-300 ${
-            menuOpen ? "block" : "hidden"
-          }`}
-        >
-          <NavLink to="/" className="hover:text-black block lg:inline">
-            Home
-          </NavLink>
-          <NavLink to="package" className="hover:text-black block lg:inline">
-            Package
-          </NavLink>
-          <NavLink to="/community" className="hover:text-black block lg:inline">
-            Community
-          </NavLink>
-          <NavLink to="/blogs" className="hover:text-black block lg:inline">
-            Blogs
-          </NavLink>
-          <NavLink to="/contact" className="hover:text-black block lg:inline">
-            Contact Us
-          </NavLink>
+        {/* Mobile Menu */}
+        {menuOpen && (
+          <div className="fixed top-0 left-0 w-full  bg-[#00B19D] flex flex-col items-center space-y-6 p-10 shadow-lg lg:hidden z-50">
+            <button
+              className="absolute top-5 right-5 text-white"
+              onClick={() => setMenuOpen(false)}
+            >
+              ✖
+            </button>
+            <NavLink to="/" className="hover:text-black" onClick={() => setMenuOpen(false)}>
+              Home
+            </NavLink>
+            <NavLink to="/package" className="hover:text-black" onClick={() => setMenuOpen(false)}>
+              Package
+            </NavLink>
+            <NavLink to="/community" className="hover:text-black" onClick={() => setMenuOpen(false)}>
+              Community
+            </NavLink>
+            <NavLink to="/blogs" className="hover:text-black" onClick={() => setMenuOpen(false)}>
+              Blogs
+            </NavLink>
+            <NavLink to="/contact" className="hover:text-black" onClick={() => setMenuOpen(false)}>
+              Contact Us
+            </NavLink>
+          </div>
+        )}
+
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex items-center space-x-6">
+          <NavLink to="/" className="hover:text-black">Home</NavLink>
+          <NavLink to="/package" className="hover:text-black">Package</NavLink>
+          <NavLink to="/community" className="hover:text-black">Community</NavLink>
+          <NavLink to="/blogs" className="hover:text-black">Blogs</NavLink>
+          <NavLink to="/contact" className="hover:text-black">Contact Us</NavLink>
         </div>
 
         {/* Right Side - User/Login Button */}
