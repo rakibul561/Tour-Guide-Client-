@@ -124,12 +124,17 @@ const Navbar = () => {
 
           {/* User Dropdown */}
           <div
-            className={`absolute right-0 top-14 z-50 w-40 lg:w-48 p-4 shadow-lg bg-white text-black rounded-lg ${
+            className={`absolute text-center right-0 top-14 z-50 w-40 lg:w-72 p-4 shadow-lg bg-white text-black rounded-lg ${
               userOpen ? "block" : "hidden"
             }`}
           >
             <p className="text-sm font-semibold">{user?.displayName}</p>
             <p className="text-sm">{user?.email}</p>
+            <Link to="dashboard/profile">
+              <button className="w-full my-2 btn btn-sm btn-outline btn-success font-bold">
+                Profile
+              </button>
+            </Link>
             <Link to="/dashboard">
               <button className="w-full my-2 btn btn-sm btn-outline btn-success font-bold">
                 Dashboard

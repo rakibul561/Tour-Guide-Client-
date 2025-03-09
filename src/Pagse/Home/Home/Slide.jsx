@@ -24,10 +24,10 @@ const Slide = ({ image }) => {
 
                     {/* Buttons */}
                     <div className='mt-6 flex justify-center gap-4'>
-                        <Link to= "/blogs" className='px-6 py-3 text-lg font-semibold text-white bg-[#10B981] rounded-full hover:bg-[#0f8a6d] transition duration-300'>
+                        <Link to= "/blogs" className='px-6 lg:py-3 lg:text-lg font-semibold text-white bg-[#10B981] rounded-full hover:bg-[#0f8a6d] transition duration-300'>
                             Explore Destinations
                         </Link>
-                        <Link to='/package' className='px-6 py-3 text-lg font-semibold text-white bg-[#2563EB] rounded-full hover:bg-[#1D4ED8] transition duration-300'>
+                        <Link to='/package' className='px-6 lg:py-3 lg:text-lg font-semibold text-white bg-[#2563EB] rounded-full hover:bg-[#1D4ED8] transition duration-300'>
                             Book Now
                         </Link>
                     </div>
