@@ -26,6 +26,8 @@ import Story from "../UserDashBoard/Story";
 import MyWhislist from "../UserDashBoard/MyWhislist";
 import WishDetails from "../UserDashBoard/WishDetails"; // WishDetails কম্পোনেন্ট আমদানি করুন
 import MyAssignTour from "../GuideDashboard/MyAssignTour";
+import Success from "../UserDashBoard/Payments/Success";
+import PaymentHistory from "../UserDashBoard/PaymentHistory";
 
 export const router = createBrowserRouter([
     {
@@ -82,6 +84,10 @@ export const router = createBrowserRouter([
                 path: '/wishlist/:id',
                 element: <WishDetails></WishDetails>,
                 loader: ({ params }) => fetch(`http://localhost:5000/heart/${params.id}`)
+            },
+            {
+                path: '/success',
+                element: <Success/>
             }
         ]
     },
@@ -108,7 +114,12 @@ export const router = createBrowserRouter([
             {
                 path: 'bookings',
                 element: <MyBooking></MyBooking>
-            },
+            }, 
+            {
+                path:'payment-history',
+                element:<PaymentHistory/>
+            }
+            ,
             {
                 path: 'userProfile',
                 element: <Profile></Profile>

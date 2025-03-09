@@ -3,6 +3,9 @@ import { FaHeartbeat } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 import UseAuth from "../../../Hooks/UseAuth";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const Place = ({ item }) => {
     const { user } = UseAuth();
@@ -30,10 +33,15 @@ const Place = ({ item }) => {
                 }
             });
     };
+   
+    useEffect(() => {
+        Aos.init();
+      }, []);
+
 
     return (
         <div className="p-2 ">
-            <div key={item._id} className="relative rounded-md shadow-md bg-white dark:bg-gray-50 dark:text-gray-900">
+            <div key={item._id} className="relative rounded-md shadow-md bg-white dark:bg-gray-50 dark:text-gray-900"  data-aos="flip-down">
                 <img
                     src={item.images}
                     alt=""

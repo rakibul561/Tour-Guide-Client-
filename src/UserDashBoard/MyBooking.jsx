@@ -15,7 +15,7 @@ const MyBooking = () => {
             .then(res => res.json())
             .then(data => setBookings(data))
     }, [url])
-    // console.log(bookings);
+    
 
 
 

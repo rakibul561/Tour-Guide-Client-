@@ -101,6 +101,12 @@ const Dashboard = () => {
                                         My Wishlist
                                     </NavLink>
                                 </li>
+                                <li>
+                                    <NavLink to='/dashboard/payment-history'>
+                                        <FaCalendar></FaCalendar>
+                                        Payment History
+                                    </NavLink>
+                                </li>
                                 
 
                             </>
