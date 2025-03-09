@@ -5,6 +5,7 @@ import Carosel from "./Caresol";
 import TourType from "./TourType";
 import Community from "../../../Componet/Pagse/Community";
 import Blogs from "../../../Componet/Pagse/Blogs";
+import UserReview from "./UserReview";
 
 const Home = () => {
     return (
@@ -30,9 +31,21 @@ const Home = () => {
   Explore all our blog posts here. Feel free to ask any questions and meet our dedicated team members.
 </p>
 
-              <Blogs/>
+              <Blogs/> 
+
               </div>
+              <div className="max-w-7xl mx-auto">
+
+
+              <h2 className="text-5xl text-center font-bold text-[#00B19D]">Our Client Reviews</h2>
+<p className="text-xl text-center mb-20 mt-4">
+  Explore all the reviews from our valued clients. Feel free to ask any questions and  <br /> learn more about their experiences with our services.
+</p>
+
+                
+              <UserReview/>
              
+              </div>
 
                 
             </div>

@@ -54,6 +54,12 @@ const Dashboard = () => {
                                             Manage Users
                                         </NavLink>
                                     </li>
+                                    <li>
+                                        <NavLink to='/dashboard/all-payment-story'>
+                                        <FaCalendar></FaCalendar>
+                                           All payment-History
+                                        </NavLink>
+                                    </li>
                                 </>
                             </>
 

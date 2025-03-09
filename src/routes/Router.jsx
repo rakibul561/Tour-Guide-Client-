@@ -28,6 +28,7 @@ import WishDetails from "../UserDashBoard/WishDetails"; // WishDetails কম্
 import MyAssignTour from "../GuideDashboard/MyAssignTour";
 import Success from "../UserDashBoard/Payments/Success";
 import PaymentHistory from "../UserDashBoard/PaymentHistory";
+import AllPayment from "../DashBoard/Admin/AllPayment";
 
 export const router = createBrowserRouter([
     {
@@ -109,6 +110,11 @@ export const router = createBrowserRouter([
             {
                 path: 'addpackage',
                 element: <AddItem></AddItem>
+            },
+            {
+                path:'all-payment-story',
+                element:<AllPayment/>
+
             },
             // user reative 
             {
