@@ -17,7 +17,9 @@ const MyBooking = () => {
     }, [url])
     
 
+ 
 
+    //  handle data is deleted 
 
     const handleDelete = id => {
         // const proced = confirm('Are you sure you want to Delete')
