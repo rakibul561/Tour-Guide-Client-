@@ -9,7 +9,7 @@ const PaymentHistory = () => {
 
     const [payments, setPayments] = useState([]);
 
-    const url = `http://localhost:5000/payment/${user?.email}`
+    const url = `https://tour-guide-server-six.vercel.app/payment/${user?.email}`
 
     useEffect(() => {
         fetch(url)

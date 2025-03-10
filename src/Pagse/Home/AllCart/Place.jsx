@@ -21,7 +21,7 @@ const Place = ({ item }) => {
             description,
             email: user?.email,
         };
-        fetch("http://localhost:5000/wishlist", {
+        fetch("https://tour-guide-server-six.vercel.app/wishlist", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(newData),

@@ -8,7 +8,7 @@ const MyWhislist = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/wishlist/${user?.email}`)
+        fetch(`https://tour-guide-server-six.vercel.app/wishlist/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
@@ -21,7 +21,7 @@ const MyWhislist = () => {
     const handleDeleteLove = id => {
 
         if (id) {
-            fetch(`http://localhost:5000/wishlist/${id}`, {
+            fetch(`https://tour-guide-server-six.vercel.app/wishlist/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

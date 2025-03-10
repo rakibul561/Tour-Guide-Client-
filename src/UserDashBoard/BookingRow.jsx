@@ -48,7 +48,7 @@ const BookingRow = ({ booking, handleDelete }) => {
         };
     
     
-        const response = await axios.post('http://localhost:5000/create-ssl-payment', payment);
+        const response = await axios.post('https://tour-guide-server-six.vercel.app/create-ssl-payment', payment);
         
          if(response.data?.gatewayUrl){
             window.location.replace(response.data.gatewayUrl)

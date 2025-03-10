@@ -5,14 +5,15 @@ import Loading from "../../../Loading/Loading";
 const UserReview = () => {  
     const axiosSecure = UseAxiosSecure();
     
-    const { data: story = [], isLoading, error } = useQuery({
-        queryKey: ['story'],
+    const { data: storys = [], isLoading, error } = useQuery({
+        queryKey: ['storys'],
         queryFn: async () => {
-            const res = await axiosSecure.get('/story'); 
+            const res = await axiosSecure.get('/storys'); 
             return res.data;
         }
     });  
-
+   
+     
     if(isLoading){
         return <Loading/>
     }
@@ -20,7 +21,7 @@ const UserReview = () => {
     return (
         <div className="bg-[#00B19D] rounded-xl mb-10 px-4 py-6">
             <div className="carousel w-full mt-10">
-                {story.map((item, index) => (
+                {storys.map((item, index) => (
                     <div key={index} id={`item${index + 1}`} className="carousel-item w-full flex flex-col items-center">
                         <img 
                             src={item.photo} 
@@ -38,7 +39,7 @@ const UserReview = () => {
 
             {/* Pagination Buttons */}
             <div className="flex flex-wrap justify-center gap-2 mt-4">
-                {story.map((_, index) => (
+                {storys.map((_, index) => (
                     <a key={index} href={`#item${index + 1}`} className="btn btn-xs">
                         {index + 1}
                     </a>

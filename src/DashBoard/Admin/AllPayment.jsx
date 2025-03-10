@@ -6,7 +6,7 @@ const AllPayment = () => {
 
       const [allpayments, setAllPayments] = useState([]);
     
-        const url = 'http://localhost:5000/payment'
+        const url = 'https://tour-guide-server-six.vercel.app/payment'
     
         useEffect(() => {
             fetch(url)

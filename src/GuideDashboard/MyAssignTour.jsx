@@ -3,7 +3,7 @@ import { useState } from "react";
 import AssignTourist from "./AssignTourist";
 import useFetchSingleUser from "../Hooks/useFindSingleUser";
 import UseAuth from "../Hooks/UseAuth";
-import { FaUserShield } from "react-icons/fa";
+
 // i    
 
 
@@ -14,7 +14,7 @@ const MyAssignTour = () => {
 
     const [books, setBooks] = useState([]);
     const [assingedData, setAssignedData] = useState([])
-    const url = `http://localhost:5000//booking`
+    const url = `https://tour-guide-server-six.vercel.app/booking`
 
     useEffect(() => {
         fetch(url)
