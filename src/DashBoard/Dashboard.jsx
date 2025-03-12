@@ -6,10 +6,7 @@ import UseAuth from "../Hooks/UseAuth";
 import Loading from "../Loading/Loading";
 
 const Dashboard = () => {
-    // const [isAdmin] = useAdmin();
 
-    // const isAdmin = true;
-    // const [isAdmin] = useAdmin();
     const { user } = UseAuth()
 
     const { singleUser, loading } = useFetchSingleUser(user?.email)

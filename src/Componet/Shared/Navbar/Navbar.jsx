@@ -135,7 +135,7 @@ const Navbar = () => {
                 Profile
               </button>
             </Link>
-            <Link to="/dashboard">
+            <Link to="/dashboard/profile">
               <button className="w-full my-2 btn btn-sm btn-outline btn-success font-bold">
                 Dashboard
               </button>
